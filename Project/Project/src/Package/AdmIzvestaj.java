@@ -17,17 +17,9 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.Icon;
 import javax.swing.JRadioButton;
 
-public class AdmLekoviDodajNovi extends JPanel{
-	private JTextField textField;
-	private JTextField textField_1;
-	private JTextField textField_2;
-	private JTextField textField_3;
+public class AdmIzvestaj extends JPanel{
 	
-	public JLabel listal = new JLabel("Lista lekova");
-	public JLabel pretragal = new JLabel("Pretraga lekova");
-	public JLabel dodajl = new JLabel("<HTML><U>Dodaj novi</U></HTML>");
-	public JLabel izmenil = new JLabel("Izmeni postojeci");
-public AdmLekoviDodajNovi() {
+public AdmIzvestaj() {
 		
 		this.setBackground(new Color(194,236,235));
 		this.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -180,102 +172,64 @@ public AdmLekoviDodajNovi() {
 	    );
 	    panel_3.setLayout(gl_panel_3);
 	    
-	    JLabel lblNewLabel = new JLabel("LEKOVI");
+	    JLabel lblNewLabel = new JLabel("IZVESTAJ PRODAJE");
 	    lblNewLabel.setFont(new Font("Montserrat", Font.PLAIN, 27));
 	    lblNewLabel.setForeground(new Color(8,126,139));
 	    
-	    listal.setHorizontalAlignment(SwingConstants.CENTER);
-	    listal.setForeground(new Color(8, 126, 139));
-	    listal.setFont(new Font("Montserrat", Font.PLAIN, 14));
+	    JLabel lekovitx_1_1_2 = new JLabel("Izlistati na osnovu:");
+	    lekovitx_1_1_2.setHorizontalAlignment(SwingConstants.CENTER);
+	    lekovitx_1_1_2.setForeground(new Color(8, 126, 139));
+	    lekovitx_1_1_2.setFont(new Font("Montserrat", Font.PLAIN, 14));
 	    
-	    pretragal.setHorizontalAlignment(SwingConstants.CENTER);
-	    pretragal.setForeground(new Color(8, 126, 139));
-	    pretragal.setFont(new Font("Montserrat", Font.PLAIN, 14));
+	    JRadioButton rdbtnNewRadioButton = new JRadioButton("Ukupna prodaja lekova");
+	    rdbtnNewRadioButton.setFont(new Font("Montserrat", Font.PLAIN, 14));
+	    rdbtnNewRadioButton.setForeground(new Color(8, 126, 139));
+	    rdbtnNewRadioButton.setOpaque(false);
 	    
-	    dodajl.setHorizontalAlignment(SwingConstants.CENTER);
-	    dodajl.setForeground(new Color(8, 126, 139));
-	    dodajl.setFont(new Font("Montserrat", Font.PLAIN, 14));
+	    JRadioButton rdbtnProizvodjac = new JRadioButton("Ukupna prodaja lekova po proizvodjacu");
+	    rdbtnProizvodjac.setOpaque(false);
+	    rdbtnProizvodjac.setForeground(new Color(8, 126, 139));
+	    rdbtnProizvodjac.setFont(new Font("Montserrat", Font.PLAIN, 14));
 	    
-	    izmenil.setHorizontalAlignment(SwingConstants.CENTER);
-	    izmenil.setForeground(new Color(8, 126, 139));
-	    izmenil.setFont(new Font("Montserrat", Font.PLAIN, 14));
+	    JRadioButton rdbtnCena = new JRadioButton("Ukupna prodaja lekova po lekaru");
+	    rdbtnCena.setOpaque(false);
+	    rdbtnCena.setForeground(new Color(8, 126, 139));
+	    rdbtnCena.setFont(new Font("Montserrat", Font.PLAIN, 14));
 	    
-	    JLabel lekovitx_1_2 = new JLabel("Proizvodjac");
-	    lekovitx_1_2.setHorizontalAlignment(SwingConstants.RIGHT);
-	    lekovitx_1_2.setForeground(new Color(8, 126, 139));
-	    lekovitx_1_2.setFont(new Font("Montserrat", Font.PLAIN, 14));
+	    JPanel panel_4 = new JPanel();
+	    panel_4.setBackground(new Color(8, 126, 139));
 	    
-	    JLabel lekovitx_1_2_1 = new JLabel("Naziv");
-	    lekovitx_1_2_1.setHorizontalAlignment(SwingConstants.RIGHT);
-	    lekovitx_1_2_1.setForeground(new Color(8, 126, 139));
-	    lekovitx_1_2_1.setFont(new Font("Montserrat", Font.PLAIN, 14));
+	    JLabel lekovitx_1_1_2_1 = new JLabel("Ukupna cena:");
+	    lekovitx_1_1_2_1.setHorizontalAlignment(SwingConstants.RIGHT);
+	    lekovitx_1_1_2_1.setForeground(new Color(8, 126, 139));
+	    lekovitx_1_1_2_1.setFont(new Font("Montserrat", Font.PLAIN, 14));
 	    
-	    JLabel lekovitx_1_2_1_1 = new JLabel("Sifra");
-	    lekovitx_1_2_1_1.setHorizontalAlignment(SwingConstants.RIGHT);
-	    lekovitx_1_2_1_1.setForeground(new Color(8, 126, 139));
-	    lekovitx_1_2_1_1.setFont(new Font("Montserrat", Font.PLAIN, 14));
-	    
-	    JLabel lekovitx_1_2_1_1_1 = new JLabel("Cena");
-	    lekovitx_1_2_1_1_1.setHorizontalAlignment(SwingConstants.RIGHT);
-	    lekovitx_1_2_1_1_1.setForeground(new Color(8, 126, 139));
-	    lekovitx_1_2_1_1_1.setFont(new Font("Montserrat", Font.PLAIN, 14));
-	    
-	    textField = new JTextField();
-	    textField.setColumns(10);
-	    
-	    textField_1 = new JTextField();
-	    textField_1.setColumns(10);
-	    
-	    textField_2 = new JTextField();
-	    textField_2.setColumns(10);
-	    
-	    textField_3 = new JTextField();
-	    textField_3.setColumns(10);
-	    
-	    JButton btnNewButton = new JButton("Kreiraj");
-	    btnNewButton.setForeground(new Color(194, 236, 235));
-	    btnNewButton.setFont(new Font("Montserrat", Font.PLAIN, 11));
-	    btnNewButton.setBackground(new Color(8, 126, 139));
-	    
-	    JButton btnOtkai = new JButton("Otkazi");
-	    btnOtkai.setForeground(new Color(194, 236, 235));
-	    btnOtkai.setFont(new Font("Montserrat", Font.PLAIN, 11));
-	    btnOtkai.setBackground(new Color(255, 90, 95));
+	    JLabel lblNewLabel_1 = new JLabel("cdcdcdcdcdcdc");
+	    lblNewLabel_1.setForeground(Color.WHITE);
+	    lblNewLabel_1.setOpaque(true);
+	    lblNewLabel_1.setBackground(Color.WHITE);
 	    GroupLayout gl_panel_2 = new GroupLayout(panel_2);
 	    gl_panel_2.setHorizontalGroup(
-	    	gl_panel_2.createParallelGroup(Alignment.LEADING)
+	    	gl_panel_2.createParallelGroup(Alignment.TRAILING)
 	    		.addGroup(gl_panel_2.createSequentialGroup()
+	    			.addContainerGap()
 	    			.addGroup(gl_panel_2.createParallelGroup(Alignment.LEADING)
+	    				.addComponent(panel_4, GroupLayout.PREFERRED_SIZE, 538, GroupLayout.PREFERRED_SIZE)
+	    				.addComponent(lblNewLabel)
 	    				.addGroup(gl_panel_2.createSequentialGroup()
-	    					.addContainerGap()
+	    					.addComponent(lekovitx_1_1_2)
+	    					.addPreferredGap(ComponentPlacement.RELATED)
 	    					.addGroup(gl_panel_2.createParallelGroup(Alignment.LEADING)
-	    						.addComponent(lblNewLabel)
-	    						.addGroup(gl_panel_2.createSequentialGroup()
-	    							.addGroup(gl_panel_2.createParallelGroup(Alignment.TRAILING)
-	    								.addGroup(gl_panel_2.createSequentialGroup()
-	    									.addComponent(listal, GroupLayout.PREFERRED_SIZE, 91, GroupLayout.PREFERRED_SIZE)
-	    									.addPreferredGap(ComponentPlacement.RELATED)
-	    									.addComponent(pretragal, GroupLayout.PREFERRED_SIZE, 120, GroupLayout.PREFERRED_SIZE))
-	    								.addComponent(lekovitx_1_2_1, GroupLayout.PREFERRED_SIZE, 91, GroupLayout.PREFERRED_SIZE)
-	    								.addComponent(lekovitx_1_2_1_1, GroupLayout.PREFERRED_SIZE, 91, GroupLayout.PREFERRED_SIZE)
-	    								.addComponent(lekovitx_1_2_1_1_1, GroupLayout.PREFERRED_SIZE, 91, GroupLayout.PREFERRED_SIZE)
-	    								.addComponent(lekovitx_1_2, GroupLayout.PREFERRED_SIZE, 91, GroupLayout.PREFERRED_SIZE))
-	    							.addPreferredGap(ComponentPlacement.RELATED)
-	    							.addGroup(gl_panel_2.createParallelGroup(Alignment.LEADING)
-	    								.addGroup(gl_panel_2.createSequentialGroup()
-	    									.addComponent(dodajl, GroupLayout.PREFERRED_SIZE, 86, GroupLayout.PREFERRED_SIZE)
-	    									.addPreferredGap(ComponentPlacement.RELATED)
-	    									.addComponent(izmenil, GroupLayout.PREFERRED_SIZE, 125, GroupLayout.PREFERRED_SIZE))
-	    								.addComponent(textField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-	    								.addComponent(textField_1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-	    								.addComponent(textField_2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-	    								.addComponent(textField_3, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))))
-	    				.addGroup(gl_panel_2.createSequentialGroup()
-	    					.addGap(150)
-	    					.addComponent(btnNewButton, GroupLayout.PREFERRED_SIZE, 98, GroupLayout.PREFERRED_SIZE)
-	    					.addGap(6)
-	    					.addComponent(btnOtkai, GroupLayout.PREFERRED_SIZE, 97, GroupLayout.PREFERRED_SIZE)))
-	    			.addContainerGap(109, Short.MAX_VALUE))
+	    						.addComponent(rdbtnProizvodjac)
+	    						.addComponent(rdbtnNewRadioButton)
+	    						.addComponent(rdbtnCena))))
+	    			.addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+	    		.addGroup(gl_panel_2.createSequentialGroup()
+	    			.addContainerGap(379, Short.MAX_VALUE)
+	    			.addComponent(lekovitx_1_1_2_1, GroupLayout.PREFERRED_SIZE, 129, GroupLayout.PREFERRED_SIZE)
+	    			.addPreferredGap(ComponentPlacement.UNRELATED)
+	    			.addComponent(lblNewLabel_1, GroupLayout.PREFERRED_SIZE, 89, GroupLayout.PREFERRED_SIZE)
+	    			.addGap(22))
 	    );
 	    gl_panel_2.setVerticalGroup(
 	    	gl_panel_2.createParallelGroup(Alignment.LEADING)
@@ -283,36 +237,78 @@ public AdmLekoviDodajNovi() {
 	    			.addContainerGap()
 	    			.addComponent(lblNewLabel)
 	    			.addPreferredGap(ComponentPlacement.RELATED)
-	    			.addGroup(gl_panel_2.createParallelGroup(Alignment.LEADING)
-	    				.addComponent(listal)
-	    				.addGroup(gl_panel_2.createParallelGroup(Alignment.BASELINE)
-	    					.addComponent(pretragal, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE)
-	    					.addComponent(dodajl, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE)
-	    					.addComponent(izmenil, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE)))
-	    			.addGap(81)
 	    			.addGroup(gl_panel_2.createParallelGroup(Alignment.BASELINE)
-	    				.addComponent(lekovitx_1_2_1, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE)
-	    				.addComponent(textField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+	    				.addComponent(lekovitx_1_1_2, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE)
+	    				.addComponent(rdbtnNewRadioButton))
 	    			.addPreferredGap(ComponentPlacement.RELATED)
-	    			.addGroup(gl_panel_2.createParallelGroup(Alignment.BASELINE)
-	    				.addComponent(lekovitx_1_2_1_1, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE)
-	    				.addComponent(textField_1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+	    			.addComponent(rdbtnProizvodjac, GroupLayout.PREFERRED_SIZE, 27, GroupLayout.PREFERRED_SIZE)
 	    			.addPreferredGap(ComponentPlacement.RELATED)
+	    			.addComponent(rdbtnCena, GroupLayout.PREFERRED_SIZE, 27, GroupLayout.PREFERRED_SIZE)
+	    			.addGap(1)
+	    			.addComponent(panel_4, GroupLayout.PREFERRED_SIZE, 32, GroupLayout.PREFERRED_SIZE)
+	    			.addPreferredGap(ComponentPlacement.RELATED, 272, Short.MAX_VALUE)
 	    			.addGroup(gl_panel_2.createParallelGroup(Alignment.BASELINE)
-	    				.addComponent(textField_2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-	    				.addComponent(lekovitx_1_2, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE))
-	    			.addPreferredGap(ComponentPlacement.RELATED)
-	    			.addGroup(gl_panel_2.createParallelGroup(Alignment.BASELINE)
-	    				.addComponent(lekovitx_1_2_1_1_1, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE)
-	    				.addComponent(textField_3, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-	    			.addGap(18)
-	    			.addGroup(gl_panel_2.createParallelGroup(Alignment.LEADING)
-	    				.addComponent(btnNewButton)
-	    				.addComponent(btnOtkai))
-	    			.addContainerGap(202, Short.MAX_VALUE))
+	    				.addComponent(lblNewLabel_1, GroupLayout.PREFERRED_SIZE, 24, GroupLayout.PREFERRED_SIZE)
+	    				.addComponent(lekovitx_1_1_2_1, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE))
+	    			.addGap(40))
 	    );
+	    
+	    JLabel tabelanaz = new JLabel("Naziv leka");
+	    tabelanaz.setHorizontalAlignment(SwingConstants.LEFT);
+	    tabelanaz.setForeground(new Color(194,236,235));
+	    tabelanaz.setFont(new Font("Montserrat", Font.PLAIN, 14));
+	    
+	    JLabel lblSifra = new JLabel("Apotekar");
+	    lblSifra.setHorizontalAlignment(SwingConstants.LEFT);
+	    lblSifra.setForeground(new Color(194, 236, 235));
+	    lblSifra.setFont(new Font("Montserrat", Font.PLAIN, 14));
+	    
+	    JLabel lblProizvodjac = new JLabel("Proizvodjac");
+	    lblProizvodjac.setHorizontalAlignment(SwingConstants.LEFT);
+	    lblProizvodjac.setForeground(new Color(194, 236, 235));
+	    lblProizvodjac.setFont(new Font("Montserrat", Font.PLAIN, 14));
+	    
+	    JLabel lblNaRecept = new JLabel("Kolicina");
+	    lblNaRecept.setHorizontalAlignment(SwingConstants.LEFT);
+	    lblNaRecept.setForeground(new Color(194, 236, 235));
+	    lblNaRecept.setFont(new Font("Montserrat", Font.PLAIN, 14));
+	    
+	    JLabel lblCena = new JLabel("Cena");
+	    lblCena.setHorizontalAlignment(SwingConstants.LEFT);
+	    lblCena.setForeground(new Color(194, 236, 235));
+	    lblCena.setFont(new Font("Montserrat", Font.PLAIN, 14));
+	    GroupLayout gl_panel_4 = new GroupLayout(panel_4);
+	    gl_panel_4.setHorizontalGroup(
+	    	gl_panel_4.createParallelGroup(Alignment.LEADING)
+	    		.addGroup(gl_panel_4.createSequentialGroup()
+	    			.addContainerGap()
+	    			.addComponent(tabelanaz, GroupLayout.DEFAULT_SIZE, 125, Short.MAX_VALUE)
+	    			.addPreferredGap(ComponentPlacement.UNRELATED)
+	    			.addComponent(lblProizvodjac, GroupLayout.PREFERRED_SIZE, 183, GroupLayout.PREFERRED_SIZE)
+	    			.addPreferredGap(ComponentPlacement.RELATED)
+	    			.addComponent(lblSifra)
+	    			.addGap(40)
+	    			.addComponent(lblNaRecept)
+	    			.addPreferredGap(ComponentPlacement.RELATED)
+	    			.addComponent(lblCena, GroupLayout.PREFERRED_SIZE, 48, GroupLayout.PREFERRED_SIZE)
+	    			.addContainerGap())
+	    );
+	    gl_panel_4.setVerticalGroup(
+	    	gl_panel_4.createParallelGroup(Alignment.LEADING)
+	    		.addGroup(gl_panel_4.createSequentialGroup()
+	    			.addGroup(gl_panel_4.createParallelGroup(Alignment.BASELINE)
+	    				.addComponent(tabelanaz, GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+	    				.addComponent(lblCena, GroupLayout.PREFERRED_SIZE, 30, GroupLayout.PREFERRED_SIZE)
+	    				.addComponent(lblNaRecept, GroupLayout.PREFERRED_SIZE, 30, GroupLayout.PREFERRED_SIZE)
+	    				.addComponent(lblProizvodjac, GroupLayout.PREFERRED_SIZE, 30, GroupLayout.PREFERRED_SIZE)
+	    				.addComponent(lblSifra, GroupLayout.PREFERRED_SIZE, 30, GroupLayout.PREFERRED_SIZE))
+	    			.addGap(38))
+	    );
+	    panel_4.setLayout(gl_panel_4);
 	    panel_2.setLayout(gl_panel_2);
 	    panel.setLayout(gl_panel);
 		
+	    
+	    
 	}
 }
