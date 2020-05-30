@@ -1,68 +1,37 @@
 package Package;
 
 import java.awt.BorderLayout;
-import java.awt.EventQueue;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
 import java.awt.Color;
-import javax.swing.BoxLayout;
-import javax.swing.ImageIcon;
-import javax.swing.JLabel;
 import java.awt.Font;
-import java.awt.Image;
-import javax.swing.SwingConstants;
+
 import javax.swing.GroupLayout;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+import javax.swing.SwingConstants;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.LayoutStyle.ComponentPlacement;
-import javax.swing.JTextField;
-import javax.swing.JButton;
+import javax.swing.border.EmptyBorder;
 
-public class Logovanje extends JFrame {
-
-	private JPanel contentPane;
-	private JTextField textField;
-	private JTextField textField_1;
-
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Logovanje frame = new Logovanje();
-					frame.setVisible(true);
-					frame.setSize(700, 500);
-					ImageIcon logoicon = new ImageIcon("logoicon.png");
-					Image logo = logoicon.getImage();
-					frame.setIconImage(logo);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
-	/**
-	 * Create the frame.
-	 */
+public class Logovanje extends JPanel{
+	
+	public JButton btnNewButton = new JButton("Potvrdi");
+	public JButton btnOtkai = new JButton("Otkazi");
+	public JTextField textField = new JTextField();
+	public JTextField textField_1 = new JTextField();
+	
 	public Logovanje() {
-		setResizable(false);
-		setTitle("Logovanje u sistem");
-		setFont(new Font("Montserrat", Font.PLAIN, 12));
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 700, 500);
-		contentPane = new JPanel();
-		contentPane.setBackground(new Color(194,236,235));
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		setContentPane(contentPane);
-		contentPane.setLayout(new BorderLayout(0, 0));
+		
+		this.setBackground(new Color(194,236,235));
+		this.setBorder(new EmptyBorder(5, 5, 5, 5));
+		//setthis(this);
+		this.setLayout(new BorderLayout(0, 0));
 		
 		JPanel panel = new JPanel();
 		panel.setBackground(new Color(194,236,235));
-		contentPane.add(panel, BorderLayout.CENTER);
+		this.add(panel, BorderLayout.CENTER);
 		
 		ImageIcon imageIcon = new ImageIcon("logoicon2.png");
 	    JLabel logopoc = new JLabel(new ImageIcon("C:\\Users\\eleon\\eclipse-workspace\\Project\\Images\\logoicon2.png"));
@@ -72,7 +41,7 @@ public class Logovanje extends JFrame {
 	    lblNewLabel.setForeground(new Color(8,126,139));
 	    lblNewLabel.setFont(new Font("Montserrat", Font.PLAIN, 16));
 	    
-	    JLabel lblNewLabel_1 = new JLabel("Korisničko ime");
+	    JLabel lblNewLabel_1 = new JLabel("Korisnicko ime");
 	    lblNewLabel_1.setForeground(new Color(8,126,139));
 	    lblNewLabel_1.setFont(new Font("Montserrat", Font.PLAIN, 12));
 	    
@@ -81,18 +50,17 @@ public class Logovanje extends JFrame {
 	    lblNewLabel_1_1.setForeground(new Color(8, 126, 139));
 	    lblNewLabel_1_1.setFont(new Font("Montserrat", Font.PLAIN, 12));
 	    
-	    textField = new JTextField();
+	    
 	    textField.setColumns(10);
 	    
-	    textField_1 = new JTextField();
+	    
 	    textField_1.setColumns(10);
 	    
-	    JButton btnNewButton = new JButton("Potvrdi");
 	    btnNewButton.setFont(new Font("Montserrat", Font.PLAIN, 11));
 	    btnNewButton.setBackground(new Color(8,126,139));
 	    btnNewButton.setForeground(new Color(194,236,235));
 	    
-	    JButton btnOtkai = new JButton("Otkaži");
+	    
 	    btnOtkai.setForeground(new Color(194, 236, 235));
 	    btnOtkai.setFont(new Font("Montserrat", Font.PLAIN, 11));
 	    btnOtkai.setBackground(new Color(255,90,95));
