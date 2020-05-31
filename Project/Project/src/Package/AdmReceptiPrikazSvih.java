@@ -19,8 +19,13 @@ import javax.swing.JRadioButton;
 
 public class AdmReceptiPrikazSvih extends JPanel{
 	
-	public JLabel listal = new JLabel("<HTML><U>Lista recepata</U></HTML>");
-	public JLabel pretragal = new JLabel("Pretraga lekova");
+	public JLabel listar = new JLabel("<HTML><U>Lista recepata</U></HTML>");
+	public JLabel pretragar = new JLabel("Pretraga recepata");
+	public JLabel recepti = new JLabel(new ImageIcon("Images\\bill2.png"));
+	
+	public JLabel lekovi = new JLabel(new ImageIcon("Images\\drugs2.png"));
+	public JLabel korisnici = new JLabel(new ImageIcon("Images\\people2.png"));
+	public JLabel izvestaj = new JLabel(new ImageIcon("Images\\medical-prescription2.png"));
 	
 public AdmReceptiPrikazSvih() {
 		
@@ -61,11 +66,11 @@ public AdmReceptiPrikazSvih() {
 	    JPanel panel_1 = new JPanel();
 	    panel_1.setBorder(null);
 	    panel_1.setOpaque(false);
-	    JLabel logomeni = new JLabel(new ImageIcon("C:\\Users\\eleon\\eclipse-workspace\\Project\\Images\\medicine2.png"));
+	    JLabel logomeni = new JLabel(new ImageIcon("Images\\medicine2.png"));
 	    logomeni.setText("");
 	    logomeni.setBackground(null);
 	    
-	    JLabel lekovi = new JLabel(new ImageIcon("C:\\Users\\eleon\\eclipse-workspace\\Project\\Images\\drugs2.png"));
+	    
 	    lekovi.setText("");
 	    lekovi.setBackground((Color) null);
 	    
@@ -80,11 +85,11 @@ public AdmReceptiPrikazSvih() {
 	    receptitx.setForeground(new Color(8, 126, 139));
 	    receptitx.setFont(new Font("Montserrat", Font.PLAIN, 11));
 	    
-	    JLabel recepti = new JLabel(new ImageIcon("C:\\Users\\eleon\\eclipse-workspace\\Project\\Images\\bill2.png"));
+	    
 	    recepti.setText("");
 	    recepti.setBackground((Color) null);
 	    
-	    JLabel korisnici = new JLabel(new ImageIcon("C:\\Users\\eleon\\eclipse-workspace\\Project\\Images\\people2.png"));
+	    
 	    korisnici.setText("");
 	    korisnici.setBackground((Color) null);
 	    
@@ -93,7 +98,7 @@ public AdmReceptiPrikazSvih() {
 	    korisnicitx.setForeground(new Color(8, 126, 139));
 	    korisnicitx.setFont(new Font("Montserrat", Font.PLAIN, 11));
 	    
-	    JLabel izvestaj = new JLabel(new ImageIcon("C:\\Users\\eleon\\eclipse-workspace\\Project\\Images\\medical-prescription2.png"));
+	    
 	    izvestaj.setText("");
 	    izvestaj.setBackground((Color) null);
 	    
@@ -180,14 +185,14 @@ public AdmReceptiPrikazSvih() {
 	    lblNewLabel.setForeground(new Color(8,126,139));
 	    
 	    
-	    listal.setHorizontalAlignment(SwingConstants.CENTER);
-	    listal.setForeground(new Color(8, 126, 139));
-	    listal.setFont(new Font("Montserrat", Font.PLAIN, 14));
+	    listar.setHorizontalAlignment(SwingConstants.CENTER);
+	    listar.setForeground(new Color(8, 126, 139));
+	    listar.setFont(new Font("Montserrat", Font.PLAIN, 14));
 	    
 	    
-	    pretragal.setHorizontalAlignment(SwingConstants.CENTER);
-	    pretragal.setForeground(new Color(8, 126, 139));
-	    pretragal.setFont(new Font("Montserrat", Font.PLAIN, 14));
+	    pretragar.setHorizontalAlignment(SwingConstants.CENTER);
+	    pretragar.setForeground(new Color(8, 126, 139));
+	    pretragar.setFont(new Font("Montserrat", Font.PLAIN, 14));
 	    
 	    JLabel lekovitx_1_1_2 = new JLabel("Sortiraj po:");
 	    lekovitx_1_1_2.setHorizontalAlignment(SwingConstants.CENTER);
@@ -213,17 +218,17 @@ public AdmReceptiPrikazSvih() {
 	    panel_4.setBackground(new Color(8, 126, 139));
 	    GroupLayout gl_panel_2 = new GroupLayout(panel_2);
 	    gl_panel_2.setHorizontalGroup(
-	    	gl_panel_2.createParallelGroup(Alignment.LEADING)
+	    	gl_panel_2.createParallelGroup(Alignment.TRAILING)
 	    		.addGroup(gl_panel_2.createSequentialGroup()
 	    			.addContainerGap()
 	    			.addGroup(gl_panel_2.createParallelGroup(Alignment.LEADING)
 	    				.addComponent(lblNewLabel)
 	    				.addGroup(gl_panel_2.createSequentialGroup()
-	    					.addComponent(listal, GroupLayout.PREFERRED_SIZE, 107, GroupLayout.PREFERRED_SIZE)
+	    					.addComponent(listar, GroupLayout.PREFERRED_SIZE, 107, GroupLayout.PREFERRED_SIZE)
 	    					.addPreferredGap(ComponentPlacement.RELATED)
-	    					.addComponent(pretragal, GroupLayout.PREFERRED_SIZE, 120, GroupLayout.PREFERRED_SIZE)))
-	    			.addContainerGap(315, Short.MAX_VALUE))
-	    		.addGroup(Alignment.TRAILING, gl_panel_2.createSequentialGroup()
+	    					.addComponent(pretragar)))
+	    			.addContainerGap(308, Short.MAX_VALUE))
+	    		.addGroup(gl_panel_2.createSequentialGroup()
 	    			.addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
 	    			.addGroup(gl_panel_2.createParallelGroup(Alignment.LEADING)
 	    				.addComponent(panel_4, GroupLayout.PREFERRED_SIZE, 538, GroupLayout.PREFERRED_SIZE)
@@ -243,8 +248,8 @@ public AdmReceptiPrikazSvih() {
 	    			.addComponent(lblNewLabel)
 	    			.addPreferredGap(ComponentPlacement.RELATED)
 	    			.addGroup(gl_panel_2.createParallelGroup(Alignment.BASELINE)
-	    				.addComponent(listal, 0, 0, Short.MAX_VALUE)
-	    				.addComponent(pretragal, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE))
+	    				.addComponent(listar, 0, 0, Short.MAX_VALUE)
+	    				.addComponent(pretragar, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE))
 	    			.addPreferredGap(ComponentPlacement.RELATED)
 	    			.addComponent(lekovitx_1_1_2, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE)
 	    			.addPreferredGap(ComponentPlacement.RELATED)

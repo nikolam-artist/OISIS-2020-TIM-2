@@ -19,6 +19,12 @@ import javax.swing.JRadioButton;
 
 public class AdmIzvestaj extends JPanel{
 	
+	public JLabel izvestaj = new JLabel(new ImageIcon("Images\\medical-prescription2.png"));
+	
+    public JLabel lekovi = new JLabel(new ImageIcon("Images\\drugs2.png"));
+    public JLabel recepti = new JLabel(new ImageIcon("Images\\bill2.png"));
+    public JLabel korisnici = new JLabel(new ImageIcon("Images\\people2.png"));
+	
 public AdmIzvestaj() {
 		
 		this.setBackground(new Color(194,236,235));
@@ -58,11 +64,11 @@ public AdmIzvestaj() {
 	    JPanel panel_1 = new JPanel();
 	    panel_1.setBorder(null);
 	    panel_1.setOpaque(false);
-	    JLabel logomeni = new JLabel(new ImageIcon("C:\\Users\\eleon\\eclipse-workspace\\Project\\Images\\medicine2.png"));
+	    JLabel logomeni = new JLabel(new ImageIcon("Images\\medicine2.png"));
 	    logomeni.setText("");
 	    logomeni.setBackground(null);
 	    
-	    JLabel lekovi = new JLabel(new ImageIcon("C:\\Users\\eleon\\eclipse-workspace\\Project\\Images\\drugs2.png"));
+
 	    lekovi.setText("");
 	    lekovi.setBackground((Color) null);
 	    
@@ -77,11 +83,11 @@ public AdmIzvestaj() {
 	    receptitx.setForeground(new Color(8, 126, 139));
 	    receptitx.setFont(new Font("Montserrat", Font.PLAIN, 11));
 	    
-	    JLabel recepti = new JLabel(new ImageIcon("C:\\Users\\eleon\\eclipse-workspace\\Project\\Images\\bill2.png"));
+
 	    recepti.setText("");
 	    recepti.setBackground((Color) null);
 	    
-	    JLabel korisnici = new JLabel(new ImageIcon("C:\\Users\\eleon\\eclipse-workspace\\Project\\Images\\people2.png"));
+
 	    korisnici.setText("");
 	    korisnici.setBackground((Color) null);
 	    
@@ -90,7 +96,7 @@ public AdmIzvestaj() {
 	    korisnicitx.setForeground(new Color(8, 126, 139));
 	    korisnicitx.setFont(new Font("Montserrat", Font.PLAIN, 11));
 	    
-	    JLabel izvestaj = new JLabel(new ImageIcon("C:\\Users\\eleon\\eclipse-workspace\\Project\\Images\\medical-prescription2.png"));
+	    
 	    izvestaj.setText("");
 	    izvestaj.setBackground((Color) null);
 	    
@@ -225,11 +231,11 @@ public AdmIzvestaj() {
 	    						.addComponent(rdbtnCena))))
 	    			.addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
 	    		.addGroup(gl_panel_2.createSequentialGroup()
-	    			.addContainerGap(379, Short.MAX_VALUE)
+	    			.addContainerGap(274, Short.MAX_VALUE)
 	    			.addComponent(lekovitx_1_1_2_1, GroupLayout.PREFERRED_SIZE, 129, GroupLayout.PREFERRED_SIZE)
 	    			.addPreferredGap(ComponentPlacement.UNRELATED)
 	    			.addComponent(lblNewLabel_1, GroupLayout.PREFERRED_SIZE, 89, GroupLayout.PREFERRED_SIZE)
-	    			.addGap(22))
+	    			.addGap(56))
 	    );
 	    gl_panel_2.setVerticalGroup(
 	    	gl_panel_2.createParallelGroup(Alignment.LEADING)
@@ -246,11 +252,11 @@ public AdmIzvestaj() {
 	    			.addComponent(rdbtnCena, GroupLayout.PREFERRED_SIZE, 27, GroupLayout.PREFERRED_SIZE)
 	    			.addGap(1)
 	    			.addComponent(panel_4, GroupLayout.PREFERRED_SIZE, 32, GroupLayout.PREFERRED_SIZE)
-	    			.addPreferredGap(ComponentPlacement.RELATED, 272, Short.MAX_VALUE)
+	    			.addPreferredGap(ComponentPlacement.RELATED, 229, Short.MAX_VALUE)
 	    			.addGroup(gl_panel_2.createParallelGroup(Alignment.BASELINE)
 	    				.addComponent(lblNewLabel_1, GroupLayout.PREFERRED_SIZE, 24, GroupLayout.PREFERRED_SIZE)
 	    				.addComponent(lekovitx_1_1_2_1, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE))
-	    			.addGap(40))
+	    			.addGap(77))
 	    );
 	    
 	    JLabel tabelanaz = new JLabel("Naziv leka");

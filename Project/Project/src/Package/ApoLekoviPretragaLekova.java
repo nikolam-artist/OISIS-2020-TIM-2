@@ -62,11 +62,11 @@ public ApoLekoviPretragaLekova() {
 	    			.addContainerGap())
 	    );
 	    
-	    JLabel logomeni = new JLabel(new ImageIcon("C:\\Users\\eleon\\eclipse-workspace\\Project\\Images\\medicine2.png"));
+	    JLabel logomeni = new JLabel(new ImageIcon("Images\\medicine2.png"));
 	    logomeni.setText("");
 	    logomeni.setBackground((Color) null);
 	    
-	    JLabel lekovi = new JLabel(new ImageIcon("C:\\Users\\eleon\\eclipse-workspace\\Project\\Images\\drugs2.png"));
+	    JLabel lekovi = new JLabel(new ImageIcon("Images\\drugs2.png"));
 	    lekovi.setText("");
 	    lekovi.setBackground((Color) null);
 	    
@@ -75,7 +75,7 @@ public ApoLekoviPretragaLekova() {
 	    lekovitx.setForeground(new Color(8, 126, 139));
 	    lekovitx.setFont(new Font("Montserrat", Font.PLAIN, 11));
 	    
-	    JLabel recepti = new JLabel(new ImageIcon("C:\\Users\\eleon\\eclipse-workspace\\Project\\Images\\bill2.png"));
+	    JLabel recepti = new JLabel(new ImageIcon("Images\\bill2.png"));
 	    recepti.setText("");
 	    recepti.setBackground((Color) null);
 	    
@@ -84,7 +84,7 @@ public ApoLekoviPretragaLekova() {
 	    receptitx.setForeground(new Color(8, 126, 139));
 	    receptitx.setFont(new Font("Montserrat", Font.PLAIN, 11));
 	    
-	    JLabel korisnici = new JLabel(new ImageIcon("C:\\Users\\eleon\\eclipse-workspace\\Project\\Images\\medical2.png"));
+	    JLabel korisnici = new JLabel(new ImageIcon("Images\\medical2.png"));
 	    korisnici.setText("");
 	    korisnici.setBackground((Color) null);
 	    

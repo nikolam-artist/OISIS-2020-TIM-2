@@ -34,7 +34,7 @@ public class Logovanje extends JPanel{
 		this.add(panel, BorderLayout.CENTER);
 		
 		ImageIcon imageIcon = new ImageIcon("logoicon2.png");
-	    JLabel logopoc = new JLabel(new ImageIcon("C:\\Users\\eleon\\eclipse-workspace\\Project\\Images\\logoicon2.png"));
+	    JLabel logopoc = new JLabel(new ImageIcon("Images\\logoicon2.png"));
 	    logopoc.setText("");
 	    
 	    JLabel lblNewLabel = new JLabel("PRIJAVA");
