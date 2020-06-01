@@ -22,6 +22,15 @@ public class AdmKorisniciRegistracija extends JPanel{
 	private JTextField textField_1;
 	private JTextField textField_2;
 	private JTextField textField_3;
+	
+    public JLabel listak = new JLabel("Lista korisnika");
+    public JLabel regi = new JLabel("<HTML><U>Registracija</U></HTML>");
+    
+    public JLabel lekovi = new JLabel(new ImageIcon("Images\\drugs2.png"));
+    public JLabel recepti = new JLabel(new ImageIcon("Images\\bill2.png"));
+    public JLabel korisnici = new JLabel(new ImageIcon("Images\\people2.png"));
+    public JLabel izvestaj = new JLabel(new ImageIcon("Images\\medical-prescription2.png"));
+    
 public AdmKorisniciRegistracija() {
 		
 		this.setBackground(new Color(194,236,235));
@@ -61,11 +70,11 @@ public AdmKorisniciRegistracija() {
 	    JPanel panel_1 = new JPanel();
 	    panel_1.setBorder(null);
 	    panel_1.setOpaque(false);
-	    JLabel logomeni = new JLabel(new ImageIcon("C:\\Users\\eleon\\eclipse-workspace\\Project\\Images\\medicine2.png"));
+	    JLabel logomeni = new JLabel(new ImageIcon("Images\\medicine2.png"));
 	    logomeni.setText("");
 	    logomeni.setBackground(null);
 	    
-	    JLabel lekovi = new JLabel(new ImageIcon("C:\\Users\\eleon\\eclipse-workspace\\Project\\Images\\drugs2.png"));
+
 	    lekovi.setText("");
 	    lekovi.setBackground((Color) null);
 	    
@@ -80,11 +89,11 @@ public AdmKorisniciRegistracija() {
 	    receptitx.setForeground(new Color(8, 126, 139));
 	    receptitx.setFont(new Font("Montserrat", Font.PLAIN, 11));
 	    
-	    JLabel recepti = new JLabel(new ImageIcon("C:\\Users\\eleon\\eclipse-workspace\\Project\\Images\\bill2.png"));
+
 	    recepti.setText("");
 	    recepti.setBackground((Color) null);
 	    
-	    JLabel korisnici = new JLabel(new ImageIcon("C:\\Users\\eleon\\eclipse-workspace\\Project\\Images\\people2.png"));
+
 	    korisnici.setText("");
 	    korisnici.setBackground((Color) null);
 	    
@@ -93,7 +102,7 @@ public AdmKorisniciRegistracija() {
 	    korisnicitx.setForeground(new Color(8, 126, 139));
 	    korisnicitx.setFont(new Font("Montserrat", Font.PLAIN, 11));
 	    
-	    JLabel izvestaj = new JLabel(new ImageIcon("C:\\Users\\eleon\\eclipse-workspace\\Project\\Images\\medical-prescription2.png"));
+
 	    izvestaj.setText("");
 	    izvestaj.setBackground((Color) null);
 	    
@@ -221,15 +230,13 @@ public AdmKorisniciRegistracija() {
 	    lblNewLabel.setForeground(new Color(8, 126, 139));
 	    lblNewLabel.setFont(new Font("Montserrat", Font.PLAIN, 27));
 	    
-	    JLabel listal = new JLabel("Lista korisnika");
-	    listal.setHorizontalAlignment(SwingConstants.CENTER);
-	    listal.setForeground(new Color(8, 126, 139));
-	    listal.setFont(new Font("Montserrat", Font.PLAIN, 14));
+	    listak.setHorizontalAlignment(SwingConstants.CENTER);
+	    listak.setForeground(new Color(8, 126, 139));
+	    listak.setFont(new Font("Montserrat", Font.PLAIN, 14));
 	    
-	    JLabel dodajl = new JLabel("<HTML><U>Registracija</U></HTML>");
-	    dodajl.setHorizontalAlignment(SwingConstants.CENTER);
-	    dodajl.setForeground(new Color(8, 126, 139));
-	    dodajl.setFont(new Font("Montserrat", Font.PLAIN, 14));
+	    regi.setHorizontalAlignment(SwingConstants.CENTER);
+	    regi.setForeground(new Color(8, 126, 139));
+	    regi.setFont(new Font("Montserrat", Font.PLAIN, 14));
 	    
 	    JLabel lekovitx_1_2_1_1_1_1 = new JLabel("Tip");
 	    lekovitx_1_2_1_1_1_1.setHorizontalAlignment(SwingConstants.RIGHT);
@@ -265,9 +272,9 @@ public AdmKorisniciRegistracija() {
 	    					.addGroup(gl_panel_2.createParallelGroup(Alignment.LEADING)
 	    						.addComponent(lblNewLabel, GroupLayout.PREFERRED_SIZE, 144, GroupLayout.PREFERRED_SIZE)
 	    						.addGroup(gl_panel_2.createSequentialGroup()
-	    							.addComponent(listal, GroupLayout.PREFERRED_SIZE, 108, GroupLayout.PREFERRED_SIZE)
+	    							.addComponent(listak, GroupLayout.PREFERRED_SIZE, 108, GroupLayout.PREFERRED_SIZE)
 	    							.addGap(6)
-	    							.addComponent(dodajl, GroupLayout.PREFERRED_SIZE, 83, GroupLayout.PREFERRED_SIZE))))
+	    							.addComponent(regi, GroupLayout.PREFERRED_SIZE, 83, GroupLayout.PREFERRED_SIZE))))
 	    				.addGroup(gl_panel_2.createSequentialGroup()
 	    					.addGap(28)
 	    					.addGroup(gl_panel_2.createParallelGroup(Alignment.TRAILING)
@@ -307,8 +314,8 @@ public AdmKorisniciRegistracija() {
 	    			.addComponent(lblNewLabel, GroupLayout.PREFERRED_SIZE, 34, GroupLayout.PREFERRED_SIZE)
 	    			.addGap(6)
 	    			.addGroup(gl_panel_2.createParallelGroup(Alignment.LEADING)
-	    				.addComponent(listal, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE)
-	    				.addComponent(dodajl, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE))
+	    				.addComponent(listak, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE)
+	    				.addComponent(regi, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE))
 	    			.addGap(71)
 	    			.addGroup(gl_panel_2.createParallelGroup(Alignment.BASELINE)
 	    				.addComponent(lekovitx_1_2_1, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE)

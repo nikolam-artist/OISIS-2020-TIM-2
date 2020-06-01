@@ -17,20 +17,16 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.Icon;
 import javax.swing.JRadioButton;
 
-public class AdmLekoviPretragaLekova extends JPanel{
+public class LekLekoviPretragaLekova extends JPanel{
 	private JTextField textField;
 	
 	public JLabel listal = new JLabel("Lista lekova");
 	public JLabel pretragal = new JLabel("<HTML><U>Pretraga lekova</U></HTML>");
-	public JLabel dodajl = new JLabel("Dodaj novi");
-	public JLabel izmenil = new JLabel("Izmeni postojeci");
 	
     public JLabel lekovi = new JLabel(new ImageIcon("Images\\drugs2.png"));
 	public JLabel recepti = new JLabel(new ImageIcon("Images\\bill2.png"));
-	public JLabel korisnici = new JLabel(new ImageIcon("Images\\people2.png"));
-	public JLabel izvestaj = new JLabel(new ImageIcon("Images\\medical-prescription2.png"));
 	
-public AdmLekoviPretragaLekova() {
+public LekLekoviPretragaLekova() {
 		
 		this.setBackground(new Color(194,236,235));
 		this.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -90,22 +86,6 @@ public AdmLekoviPretragaLekova() {
 	    recepti.setText("");
 	    recepti.setBackground((Color) null);
 	    
-	    korisnici.setText("");
-	    korisnici.setBackground((Color) null);
-	    
-	    JLabel korisnicitx = new JLabel("Korisnici");
-	    korisnicitx.setHorizontalAlignment(SwingConstants.CENTER);
-	    korisnicitx.setForeground(new Color(8, 126, 139));
-	    korisnicitx.setFont(new Font("Montserrat", Font.PLAIN, 11));
-	    
-	    izvestaj.setText("");
-	    izvestaj.setBackground((Color) null);
-	    
-	    JLabel lblIzvestaj = new JLabel("Izvestaj");
-	    lblIzvestaj.setHorizontalAlignment(SwingConstants.CENTER);
-	    lblIzvestaj.setForeground(new Color(8, 126, 139));
-	    lblIzvestaj.setFont(new Font("Montserrat", Font.PLAIN, 11));
-	    
 	    
 	    GroupLayout gl_panel_1 = new GroupLayout(panel_1);
 	    gl_panel_1.setHorizontalGroup(
@@ -128,16 +108,7 @@ public AdmLekoviPretragaLekova() {
 	    							.addGroup(gl_panel_1.createSequentialGroup()
 	    								.addGap(20)
 	    								.addComponent(recepti, GroupLayout.PREFERRED_SIZE, 48, GroupLayout.PREFERRED_SIZE))
-	    							.addComponent(receptitx, GroupLayout.PREFERRED_SIZE, 88, GroupLayout.PREFERRED_SIZE)
-	    							.addGroup(gl_panel_1.createSequentialGroup()
-	    								.addGap(20)
-	    								.addComponent(korisnici, GroupLayout.PREFERRED_SIZE, 48, GroupLayout.PREFERRED_SIZE))
-	    							.addComponent(korisnicitx, GroupLayout.PREFERRED_SIZE, 88, GroupLayout.PREFERRED_SIZE)
-	    							.addGroup(gl_panel_1.createParallelGroup(Alignment.TRAILING)
-	    								.addGroup(gl_panel_1.createSequentialGroup()
-	    									.addComponent(izvestaj, GroupLayout.PREFERRED_SIZE, 48, GroupLayout.PREFERRED_SIZE)
-	    									.addGap(19))
-	    								.addComponent(lblIzvestaj, GroupLayout.PREFERRED_SIZE, 88, GroupLayout.PREFERRED_SIZE))))))
+	    							.addComponent(receptitx, GroupLayout.PREFERRED_SIZE, 88, GroupLayout.PREFERRED_SIZE)))))
 	    			.addContainerGap())
 	    );
 	    gl_panel_1.setVerticalGroup(
@@ -153,15 +124,7 @@ public AdmLekoviPretragaLekova() {
 	    			.addComponent(recepti, GroupLayout.PREFERRED_SIZE, 35, GroupLayout.PREFERRED_SIZE)
 	    			.addGap(6)
 	    			.addComponent(receptitx)
-	    			.addGap(18)
-	    			.addComponent(korisnici, GroupLayout.PREFERRED_SIZE, 35, GroupLayout.PREFERRED_SIZE)
-	    			.addGap(6)
-	    			.addComponent(korisnicitx)
-	    			.addGap(18)
-	    			.addComponent(izvestaj, GroupLayout.PREFERRED_SIZE, 35, GroupLayout.PREFERRED_SIZE)
-	    			.addPreferredGap(ComponentPlacement.RELATED)
-	    			.addComponent(lblIzvestaj)
-	    			.addContainerGap(105, Short.MAX_VALUE))
+	    			.addContainerGap(251, Short.MAX_VALUE))
 	    );
 	    panel_1.setLayout(gl_panel_1);
 	    GroupLayout gl_panel_3 = new GroupLayout(panel_3);
@@ -191,10 +154,6 @@ public AdmLekoviPretragaLekova() {
 	    pretragal.setForeground(new Color(8, 126, 139));
 	    pretragal.setFont(new Font("Montserrat", Font.PLAIN, 14));
 	    
-	    dodajl.setHorizontalAlignment(SwingConstants.CENTER);
-	    dodajl.setForeground(new Color(8, 126, 139));
-	    dodajl.setFont(new Font("Montserrat", Font.PLAIN, 14));
-	    
 	    JLabel lekovitx_1_1_2 = new JLabel("Trazi po:");
 	    lekovitx_1_1_2.setHorizontalAlignment(SwingConstants.CENTER);
 	    lekovitx_1_1_2.setForeground(new Color(8, 126, 139));
@@ -217,10 +176,6 @@ public AdmLekoviPretragaLekova() {
 	    
 	    JPanel panel_4 = new JPanel();
 	    panel_4.setBackground(new Color(8, 126, 139));
-	    
-	    izmenil.setHorizontalAlignment(SwingConstants.CENTER);
-	    izmenil.setForeground(new Color(8, 126, 139));
-	    izmenil.setFont(new Font("Montserrat", Font.PLAIN, 14));
 	    
 	    JLabel lekovitx_1_1_2_1 = new JLabel("Pretraga:");
 	    lekovitx_1_1_2_1.setHorizontalAlignment(SwingConstants.CENTER);
@@ -250,11 +205,7 @@ public AdmLekoviPretragaLekova() {
 	    				.addGroup(gl_panel_2.createSequentialGroup()
 	    					.addComponent(listal, GroupLayout.PREFERRED_SIZE, 91, GroupLayout.PREFERRED_SIZE)
 	    					.addPreferredGap(ComponentPlacement.RELATED)
-	    					.addComponent(pretragal, GroupLayout.PREFERRED_SIZE, 120, GroupLayout.PREFERRED_SIZE)
-	    					.addPreferredGap(ComponentPlacement.RELATED)
-	    					.addComponent(dodajl, GroupLayout.PREFERRED_SIZE, 86, GroupLayout.PREFERRED_SIZE)
-	    					.addPreferredGap(ComponentPlacement.RELATED)
-	    					.addComponent(izmenil, GroupLayout.PREFERRED_SIZE, 125, GroupLayout.PREFERRED_SIZE))
+	    					.addComponent(pretragal, GroupLayout.PREFERRED_SIZE, 120, GroupLayout.PREFERRED_SIZE))
 	    				.addComponent(lekovitx_1_1_2)
 	    				.addGroup(gl_panel_2.createSequentialGroup()
 	    					.addComponent(lekovitx_1_1_2_1)
@@ -273,10 +224,7 @@ public AdmLekoviPretragaLekova() {
 	    			.addPreferredGap(ComponentPlacement.RELATED)
 	    			.addGroup(gl_panel_2.createParallelGroup(Alignment.LEADING)
 	    				.addComponent(listal)
-	    				.addGroup(gl_panel_2.createParallelGroup(Alignment.BASELINE)
-	    					.addComponent(pretragal, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE)
-	    					.addComponent(dodajl, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE)
-	    					.addComponent(izmenil, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE)))
+	    				.addComponent(pretragal, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE))
 	    			.addPreferredGap(ComponentPlacement.RELATED)
 	    			.addComponent(lekovitx_1_1_2, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE)
 	    			.addPreferredGap(ComponentPlacement.RELATED)
@@ -291,7 +239,7 @@ public AdmLekoviPretragaLekova() {
 	    				.addComponent(btnTrazi))
 	    			.addPreferredGap(ComponentPlacement.RELATED)
 	    			.addComponent(panel_4, GroupLayout.PREFERRED_SIZE, 32, GroupLayout.PREFERRED_SIZE)
-	    			.addContainerGap(311, Short.MAX_VALUE))
+	    			.addContainerGap(306, Short.MAX_VALUE))
 	    );
 	    
 	    JLabel tabelanaz = new JLabel("Naziv");
