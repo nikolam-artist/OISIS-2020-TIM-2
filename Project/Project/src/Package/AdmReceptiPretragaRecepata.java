@@ -19,6 +19,16 @@ import javax.swing.JRadioButton;
 
 public class AdmReceptiPretragaRecepata extends JPanel{
 	private JTextField textField;
+	
+	public JLabel listar = new JLabel("Lista recepata");
+	public JLabel pretragar = new JLabel("<HTML><U>Pretraga recepata</U></HTML>");
+	
+	public JLabel recepti = new JLabel(new ImageIcon("Images\\bill2.png"));
+	
+	public JLabel lekovi = new JLabel(new ImageIcon("Images\\drugs2.png"));
+	public JLabel korisnici = new JLabel(new ImageIcon("Images\\people2.png"));
+	public JLabel izvestaj = new JLabel(new ImageIcon("Images\\medical-prescription2.png"));
+	
 public AdmReceptiPretragaRecepata() {
 		
 		this.setBackground(new Color(194,236,235));
@@ -58,11 +68,10 @@ public AdmReceptiPretragaRecepata() {
 	    JPanel panel_1 = new JPanel();
 	    panel_1.setBorder(null);
 	    panel_1.setOpaque(false);
-	    JLabel logomeni = new JLabel(new ImageIcon("C:\\Users\\eleon\\eclipse-workspace\\Project\\Images\\medicine2.png"));
+	    JLabel logomeni = new JLabel(new ImageIcon("Images\\medicine2.png"));
 	    logomeni.setText("");
 	    logomeni.setBackground(null);
 	    
-	    JLabel lekovi = new JLabel(new ImageIcon("C:\\Users\\eleon\\eclipse-workspace\\Project\\Images\\drugs2.png"));
 	    lekovi.setText("");
 	    lekovi.setBackground((Color) null);
 	    
@@ -77,11 +86,9 @@ public AdmReceptiPretragaRecepata() {
 	    receptitx.setForeground(new Color(8, 126, 139));
 	    receptitx.setFont(new Font("Montserrat", Font.PLAIN, 11));
 	    
-	    JLabel recepti = new JLabel(new ImageIcon("C:\\Users\\eleon\\eclipse-workspace\\Project\\Images\\bill2.png"));
 	    recepti.setText("");
 	    recepti.setBackground((Color) null);
 	    
-	    JLabel korisnici = new JLabel(new ImageIcon("C:\\Users\\eleon\\eclipse-workspace\\Project\\Images\\people2.png"));
 	    korisnici.setText("");
 	    korisnici.setBackground((Color) null);
 	    
@@ -90,7 +97,6 @@ public AdmReceptiPretragaRecepata() {
 	    korisnicitx.setForeground(new Color(8, 126, 139));
 	    korisnicitx.setFont(new Font("Montserrat", Font.PLAIN, 11));
 	    
-	    JLabel izvestaj = new JLabel(new ImageIcon("C:\\Users\\eleon\\eclipse-workspace\\Project\\Images\\medical-prescription2.png"));
 	    izvestaj.setText("");
 	    izvestaj.setBackground((Color) null);
 	    
@@ -197,15 +203,15 @@ public AdmReceptiPretragaRecepata() {
 	    lblNewLabel.setForeground(new Color(8, 126, 139));
 	    lblNewLabel.setFont(new Font("Montserrat", Font.PLAIN, 27));
 	    
-	    JLabel listal = new JLabel("Lista recepata");
-	    listal.setHorizontalAlignment(SwingConstants.CENTER);
-	    listal.setForeground(new Color(8, 126, 139));
-	    listal.setFont(new Font("Montserrat", Font.PLAIN, 14));
+	   
+	    listar.setHorizontalAlignment(SwingConstants.CENTER);
+	    listar.setForeground(new Color(8, 126, 139));
+	    listar.setFont(new Font("Montserrat", Font.PLAIN, 14));
 	    
-	    JLabel pretragal = new JLabel("<HTML><U>Pretraga lekova</U></HTML>");
-	    pretragal.setHorizontalAlignment(SwingConstants.CENTER);
-	    pretragal.setForeground(new Color(8, 126, 139));
-	    pretragal.setFont(new Font("Montserrat", Font.PLAIN, 14));
+	    
+	    pretragar.setHorizontalAlignment(SwingConstants.CENTER);
+	    pretragar.setForeground(new Color(8, 126, 139));
+	    pretragar.setFont(new Font("Montserrat", Font.PLAIN, 14));
 	    
 	    JRadioButton rdbtnCena = new JRadioButton("Datum");
 	    rdbtnCena.setOpaque(false);
@@ -234,9 +240,9 @@ public AdmReceptiPretragaRecepata() {
 	    				.addComponent(lekovitx_1_1_2)
 	    				.addComponent(lblNewLabel, GroupLayout.PREFERRED_SIZE, 118, GroupLayout.PREFERRED_SIZE)
 	    				.addGroup(gl_panel_2.createSequentialGroup()
-	    					.addComponent(listal, GroupLayout.PREFERRED_SIZE, 107, GroupLayout.PREFERRED_SIZE)
-	    					.addGap(6)
-	    					.addComponent(pretragal, GroupLayout.PREFERRED_SIZE, 120, GroupLayout.PREFERRED_SIZE))
+	    					.addComponent(listar, GroupLayout.PREFERRED_SIZE, 107, GroupLayout.PREFERRED_SIZE)
+	    					.addPreferredGap(ComponentPlacement.RELATED)
+	    					.addComponent(pretragar, GroupLayout.PREFERRED_SIZE, 137, GroupLayout.PREFERRED_SIZE))
 	    				.addGroup(gl_panel_2.createSequentialGroup()
 	    					.addComponent(lekovitx_1_1_2_1)
 	    					.addPreferredGap(ComponentPlacement.RELATED)
@@ -253,10 +259,11 @@ public AdmReceptiPretragaRecepata() {
 	    			.addComponent(lblNewLabel, GroupLayout.PREFERRED_SIZE, 34, GroupLayout.PREFERRED_SIZE)
 	    			.addGap(6)
 	    			.addGroup(gl_panel_2.createParallelGroup(Alignment.LEADING)
-	    				.addComponent(listal, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE)
-	    				.addComponent(pretragal, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE))
-	    			.addPreferredGap(ComponentPlacement.RELATED)
-	    			.addComponent(lekovitx_1_1_2, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE)
+	    				.addGroup(gl_panel_2.createSequentialGroup()
+	    					.addComponent(listar, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE)
+	    					.addPreferredGap(ComponentPlacement.RELATED)
+	    					.addComponent(lekovitx_1_1_2, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE))
+	    				.addComponent(pretragar, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE))
 	    			.addPreferredGap(ComponentPlacement.RELATED)
 	    			.addGroup(gl_panel_2.createParallelGroup(Alignment.LEADING)
 	    				.addComponent(rdbtnNewRadioButton, GroupLayout.PREFERRED_SIZE, 27, GroupLayout.PREFERRED_SIZE)

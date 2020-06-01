@@ -27,6 +27,12 @@ public class AdmLekoviIzmeniPostojeci extends JPanel{
 	public JLabel pretragal = new JLabel("Pretraga lekova");
 	public JLabel dodajl = new JLabel("Dodaj novi");
 	public JLabel izmenil = new JLabel("<HTML><U>Izmeni postojeci</U></HTML>");
+	
+	public JLabel lekovi = new JLabel(new ImageIcon("Images\\drugs2.png"));
+	public JLabel recepti = new JLabel(new ImageIcon("Images\\bill2.png"));
+	public JLabel korisnici = new JLabel(new ImageIcon("Images\\people2.png"));
+	public JLabel izvestaj = new JLabel(new ImageIcon("Images\\medical-prescription2.png"));
+	
 public AdmLekoviIzmeniPostojeci() {
 		
 		this.setBackground(new Color(194,236,235));
@@ -66,11 +72,10 @@ public AdmLekoviIzmeniPostojeci() {
 	    JPanel panel_1 = new JPanel();
 	    panel_1.setBorder(null);
 	    panel_1.setOpaque(false);
-	    JLabel logomeni = new JLabel(new ImageIcon("C:\\Users\\eleon\\eclipse-workspace\\Project\\Images\\medicine2.png"));
+	    JLabel logomeni = new JLabel(new ImageIcon("Images\\medicine2.png"));
 	    logomeni.setText("");
 	    logomeni.setBackground(null);
 	    
-	    JLabel lekovi = new JLabel(new ImageIcon("C:\\Users\\eleon\\eclipse-workspace\\Project\\Images\\drugs2.png"));
 	    lekovi.setText("");
 	    lekovi.setBackground((Color) null);
 	    
@@ -79,11 +84,9 @@ public AdmLekoviIzmeniPostojeci() {
 	    receptitx.setForeground(new Color(8, 126, 139));
 	    receptitx.setFont(new Font("Montserrat", Font.PLAIN, 11));
 	    
-	    JLabel recepti = new JLabel(new ImageIcon("C:\\Users\\eleon\\eclipse-workspace\\Project\\Images\\bill2.png"));
 	    recepti.setText("");
 	    recepti.setBackground((Color) null);
 	    
-	    JLabel korisnici = new JLabel(new ImageIcon("C:\\Users\\eleon\\eclipse-workspace\\Project\\Images\\people2.png"));
 	    korisnici.setText("");
 	    korisnici.setBackground((Color) null);
 	    
@@ -92,7 +95,6 @@ public AdmLekoviIzmeniPostojeci() {
 	    korisnicitx.setForeground(new Color(8, 126, 139));
 	    korisnicitx.setFont(new Font("Montserrat", Font.PLAIN, 11));
 	    
-	    JLabel izvestaj = new JLabel(new ImageIcon("C:\\Users\\eleon\\eclipse-workspace\\Project\\Images\\medical-prescription2.png"));
 	    izvestaj.setText("");
 	    izvestaj.setBackground((Color) null);
 	    
@@ -100,6 +102,11 @@ public AdmLekoviIzmeniPostojeci() {
 	    lblIzvestaj.setHorizontalAlignment(SwingConstants.CENTER);
 	    lblIzvestaj.setForeground(new Color(8, 126, 139));
 	    lblIzvestaj.setFont(new Font("Montserrat", Font.PLAIN, 11));
+	    
+	    JLabel lblLekovi = new JLabel("Lekovi");
+	    lblLekovi.setHorizontalAlignment(SwingConstants.CENTER);
+	    lblLekovi.setForeground(new Color(8, 126, 139));
+	    lblLekovi.setFont(new Font("Montserrat", Font.PLAIN, 11));
 	    
 	    
 	    GroupLayout gl_panel_1 = new GroupLayout(panel_1);
@@ -110,12 +117,10 @@ public AdmLekoviIzmeniPostojeci() {
 	    				.addGroup(gl_panel_1.createSequentialGroup()
 	    					.addGap(41)
 	    					.addComponent(lekovi, GroupLayout.PREFERRED_SIZE, 48, GroupLayout.PREFERRED_SIZE))
-	    				.addGroup(gl_panel_1.createParallelGroup(Alignment.TRAILING)
-	    					.addGroup(gl_panel_1.createSequentialGroup()
-	    						.addGap(19)
-	    						.addComponent(logomeni, GroupLayout.PREFERRED_SIZE, 90, GroupLayout.PREFERRED_SIZE))
-	    					.addGroup(gl_panel_1.createSequentialGroup()
-	    						.addContainerGap()
+	    				.addGroup(gl_panel_1.createSequentialGroup()
+	    					.addGap(19)
+	    					.addGroup(gl_panel_1.createParallelGroup(Alignment.TRAILING)
+	    						.addComponent(logomeni, GroupLayout.PREFERRED_SIZE, 90, GroupLayout.PREFERRED_SIZE)
 	    						.addGroup(gl_panel_1.createParallelGroup(Alignment.LEADING)
 	    							.addGroup(gl_panel_1.createSequentialGroup()
 	    								.addGap(20)
@@ -131,6 +136,10 @@ public AdmLekoviIzmeniPostojeci() {
 	    									.addGap(19))
 	    								.addComponent(lblIzvestaj, GroupLayout.PREFERRED_SIZE, 88, GroupLayout.PREFERRED_SIZE))))))
 	    			.addContainerGap())
+	    		.addGroup(Alignment.TRAILING, gl_panel_1.createSequentialGroup()
+	    			.addContainerGap(21, Short.MAX_VALUE)
+	    			.addComponent(lblLekovi, GroupLayout.PREFERRED_SIZE, 88, GroupLayout.PREFERRED_SIZE)
+	    			.addContainerGap())
 	    );
 	    gl_panel_1.setVerticalGroup(
 	    	gl_panel_1.createParallelGroup(Alignment.LEADING)
@@ -139,7 +148,9 @@ public AdmLekoviIzmeniPostojeci() {
 	    			.addComponent(logomeni, GroupLayout.PREFERRED_SIZE, 94, GroupLayout.PREFERRED_SIZE)
 	    			.addPreferredGap(ComponentPlacement.RELATED)
 	    			.addComponent(lekovi, GroupLayout.PREFERRED_SIZE, 35, GroupLayout.PREFERRED_SIZE)
-	    			.addGap(38)
+	    			.addPreferredGap(ComponentPlacement.RELATED)
+	    			.addComponent(lblLekovi)
+	    			.addGap(18)
 	    			.addComponent(recepti, GroupLayout.PREFERRED_SIZE, 35, GroupLayout.PREFERRED_SIZE)
 	    			.addGap(6)
 	    			.addComponent(receptitx)
