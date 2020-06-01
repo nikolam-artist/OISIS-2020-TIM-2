@@ -24,6 +24,10 @@ public class AdmLekoviPrikazSvih extends JPanel{
 	public JLabel dodajl = new JLabel("Dodaj novi");
 	public JLabel izmenil = new JLabel("Izmeni postojeci");
 	
+	public JLabel recepti = new JLabel(new ImageIcon("Images\\bill2.png"));
+	public JLabel korisnici = new JLabel(new ImageIcon("Images\\people2.png"));
+	public JLabel izvestaj = new JLabel(new ImageIcon("Images\\medical-prescription2.png"));
+	
 public AdmLekoviPrikazSvih() {
 		
 		this.setBackground(new Color(194,236,235));
@@ -63,11 +67,11 @@ public AdmLekoviPrikazSvih() {
 	    JPanel panel_1 = new JPanel();
 	    panel_1.setBorder(null);
 	    panel_1.setOpaque(false);
-	    JLabel logomeni = new JLabel(new ImageIcon("C:\\Users\\eleon\\eclipse-workspace\\Project\\Images\\medicine2.png"));
+	    JLabel logomeni = new JLabel(new ImageIcon("Images\\medicine2.png"));
 	    logomeni.setText("");
 	    logomeni.setBackground(null);
 	    
-	    JLabel lekovi = new JLabel(new ImageIcon("C:\\Users\\eleon\\eclipse-workspace\\Project\\Images\\drugs2.png"));
+	    JLabel lekovi = new JLabel(new ImageIcon("Images\\drugs2.png"));
 	    lekovi.setText("");
 	    lekovi.setBackground((Color) null);
 	    
@@ -82,11 +86,11 @@ public AdmLekoviPrikazSvih() {
 	    receptitx.setForeground(new Color(8, 126, 139));
 	    receptitx.setFont(new Font("Montserrat", Font.PLAIN, 11));
 	    
-	    JLabel recepti = new JLabel(new ImageIcon("C:\\Users\\eleon\\eclipse-workspace\\Project\\Images\\bill2.png"));
+	    
 	    recepti.setText("");
 	    recepti.setBackground((Color) null);
 	    
-	    JLabel korisnici = new JLabel(new ImageIcon("C:\\Users\\eleon\\eclipse-workspace\\Project\\Images\\people2.png"));
+	    
 	    korisnici.setText("");
 	    korisnici.setBackground((Color) null);
 	    
@@ -95,7 +99,6 @@ public AdmLekoviPrikazSvih() {
 	    korisnicitx.setForeground(new Color(8, 126, 139));
 	    korisnicitx.setFont(new Font("Montserrat", Font.PLAIN, 11));
 	    
-	    JLabel izvestaj = new JLabel(new ImageIcon("C:\\Users\\eleon\\eclipse-workspace\\Project\\Images\\medical-prescription2.png"));
 	    izvestaj.setText("");
 	    izvestaj.setBackground((Color) null);
 	    
