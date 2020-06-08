@@ -2,8 +2,13 @@ package Package;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Cursor;
 import java.awt.Font;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 
+import javax.swing.ButtonGroup;
 import javax.swing.GroupLayout;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -18,10 +23,10 @@ import javax.swing.Icon;
 import javax.swing.JRadioButton;
 
 public class AdmKorisniciRegistracija extends JPanel{
-	private JTextField textField;
-	private JTextField textField_1;
-	private JTextField textField_2;
-	private JTextField textField_3;
+	private JTextField imek;
+	private JTextField prezk;
+	private JTextField korime;
+	private JTextField lozinka;
 	
     public JLabel listak = new JLabel("Lista korisnika");
     public JLabel regi = new JLabel("<HTML><U>Registracija</U></HTML>");
@@ -204,22 +209,22 @@ public AdmKorisniciRegistracija() {
 	    lekovitx_1_2_1_1_1.setForeground(new Color(8, 126, 139));
 	    lekovitx_1_2_1_1_1.setFont(new Font("Montserrat", Font.PLAIN, 14));
 	    
-	    textField = new JTextField();
-	    textField.setColumns(10);
+	    imek = new JTextField();
+	    imek.setColumns(10);
 	    
-	    textField_1 = new JTextField();
-	    textField_1.setColumns(10);
+	    prezk = new JTextField();
+	    prezk.setColumns(10);
 	    
-	    textField_2 = new JTextField();
-	    textField_2.setColumns(10);
+	    korime = new JTextField();
+	    korime.setColumns(10);
 	    
-	    textField_3 = new JTextField();
-	    textField_3.setColumns(10);
+	    lozinka = new JTextField();
+	    lozinka.setColumns(10);
 	    
-	    JButton btnNewButton = new JButton("Kreiraj");
-	    btnNewButton.setForeground(new Color(194, 236, 235));
-	    btnNewButton.setFont(new Font("Montserrat", Font.PLAIN, 11));
-	    btnNewButton.setBackground(new Color(8, 126, 139));
+	    JButton kreiraj = new JButton("Kreiraj");
+	    kreiraj.setForeground(new Color(194, 236, 235));
+	    kreiraj.setFont(new Font("Montserrat", Font.PLAIN, 11));
+	    kreiraj.setBackground(new Color(8, 126, 139));
 	    
 	    JButton btnOtkai = new JButton("Otkazi");
 	    btnOtkai.setForeground(new Color(194, 236, 235));
@@ -243,15 +248,20 @@ public AdmKorisniciRegistracija() {
 	    lekovitx_1_2_1_1_1_1.setForeground(new Color(8, 126, 139));
 	    lekovitx_1_2_1_1_1_1.setFont(new Font("Montserrat", Font.PLAIN, 14));
 	    
-	    JRadioButton rdbtnNewRadioButton = new JRadioButton("Apotekar");
-	    rdbtnNewRadioButton.setOpaque(false);
-	    rdbtnNewRadioButton.setForeground(new Color(8, 126, 139));
-	    rdbtnNewRadioButton.setFont(new Font("Montserrat", Font.PLAIN, 14));
+	    ButtonGroup tip = new ButtonGroup();
 	    
-	    JRadioButton rdbtnNewRadioButton_1 = new JRadioButton("Lekar");
-	    rdbtnNewRadioButton_1.setOpaque(false);
-	    rdbtnNewRadioButton_1.setForeground(new Color(8, 126, 139));
-	    rdbtnNewRadioButton_1.setFont(new Font("Montserrat", Font.PLAIN, 14));
+	    JRadioButton tipa = new JRadioButton("Apotekar");
+	    tipa.setOpaque(false);
+	    tipa.setForeground(new Color(8, 126, 139));
+	    tipa.setFont(new Font("Montserrat", Font.PLAIN, 14));
+	    
+	    JRadioButton tipl = new JRadioButton("Lekar");
+	    tipl.setOpaque(false);
+	    tipl.setForeground(new Color(8, 126, 139));
+	    tipl.setFont(new Font("Montserrat", Font.PLAIN, 14));
+	    
+	    tip.add(tipa);
+	    tip.add(tipl);
 	    
 	    JLabel lblkoristiceSePri = new JLabel("(Koristice se pri logovanju u sistem)");
 	    lblkoristiceSePri.setHorizontalAlignment(SwingConstants.CENTER);
@@ -291,18 +301,18 @@ public AdmKorisniciRegistracija() {
 	    					.addPreferredGap(ComponentPlacement.RELATED)
 	    					.addGroup(gl_panel_2.createParallelGroup(Alignment.LEADING)
 	    						.addGroup(gl_panel_2.createSequentialGroup()
-	    							.addComponent(textField_3, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+	    							.addComponent(lozinka, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
 	    							.addGap(44))
 	    						.addGroup(gl_panel_2.createParallelGroup(Alignment.LEADING)
-	    							.addComponent(textField, GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
-	    							.addComponent(textField_1, GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
-	    							.addComponent(rdbtnNewRadioButton, GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
-	    							.addComponent(rdbtnNewRadioButton_1, GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
-	    							.addComponent(textField_2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))))
+	    							.addComponent(imek, GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
+	    							.addComponent(prezk, GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
+	    							.addComponent(tipa, GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
+	    							.addComponent(tipl, GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
+	    							.addComponent(korime, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))))
 	    			.addGap(204))
 	    		.addGroup(gl_panel_2.createSequentialGroup()
 	    			.addGap(150)
-	    			.addComponent(btnNewButton, GroupLayout.PREFERRED_SIZE, 98, GroupLayout.PREFERRED_SIZE)
+	    			.addComponent(kreiraj, GroupLayout.PREFERRED_SIZE, 98, GroupLayout.PREFERRED_SIZE)
 	    			.addGap(6)
 	    			.addComponent(btnOtkai, GroupLayout.PREFERRED_SIZE, 97, GroupLayout.PREFERRED_SIZE)
 	    			.addContainerGap(232, Short.MAX_VALUE))
@@ -319,20 +329,20 @@ public AdmKorisniciRegistracija() {
 	    			.addGap(71)
 	    			.addGroup(gl_panel_2.createParallelGroup(Alignment.BASELINE)
 	    				.addComponent(lekovitx_1_2_1, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE)
-	    				.addComponent(textField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+	    				.addComponent(imek, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
 	    			.addPreferredGap(ComponentPlacement.RELATED)
 	    			.addGroup(gl_panel_2.createParallelGroup(Alignment.BASELINE)
 	    				.addComponent(lekovitx_1_2_1_1, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE)
-	    				.addComponent(textField_1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+	    				.addComponent(prezk, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
 	    			.addPreferredGap(ComponentPlacement.RELATED)
 	    			.addGroup(gl_panel_2.createParallelGroup(Alignment.BASELINE)
 	    				.addComponent(lekovitx_1_2_1_1_1_1, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE)
-	    				.addComponent(rdbtnNewRadioButton, GroupLayout.PREFERRED_SIZE, 27, GroupLayout.PREFERRED_SIZE))
+	    				.addComponent(tipa, GroupLayout.PREFERRED_SIZE, 27, GroupLayout.PREFERRED_SIZE))
 	    			.addPreferredGap(ComponentPlacement.UNRELATED)
-	    			.addComponent(rdbtnNewRadioButton_1, GroupLayout.PREFERRED_SIZE, 27, GroupLayout.PREFERRED_SIZE)
+	    			.addComponent(tipl, GroupLayout.PREFERRED_SIZE, 27, GroupLayout.PREFERRED_SIZE)
 	    			.addPreferredGap(ComponentPlacement.RELATED)
 	    			.addGroup(gl_panel_2.createParallelGroup(Alignment.BASELINE)
-	    				.addComponent(textField_2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+	    				.addComponent(korime, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
 	    				.addComponent(lekovitx_1_2, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE))
 	    			.addGroup(gl_panel_2.createParallelGroup(Alignment.LEADING)
 	    				.addGroup(gl_panel_2.createSequentialGroup()
@@ -341,18 +351,41 @@ public AdmKorisniciRegistracija() {
 	    				.addGroup(gl_panel_2.createSequentialGroup()
 	    					.addGap(24)
 	    					.addGroup(gl_panel_2.createParallelGroup(Alignment.BASELINE)
-	    						.addComponent(textField_3, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+	    						.addComponent(lozinka, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
 	    						.addComponent(lekovitx_1_2_1_1_1, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE))))
 	    			.addPreferredGap(ComponentPlacement.RELATED)
 	    			.addComponent(lblkoristiceSePri_1)
 	    			.addPreferredGap(ComponentPlacement.RELATED)
 	    			.addGroup(gl_panel_2.createParallelGroup(Alignment.LEADING)
-	    				.addComponent(btnNewButton)
+	    				.addComponent(kreiraj)
 	    				.addComponent(btnOtkai))
 	    			.addContainerGap(117, Short.MAX_VALUE))
 	    );
 	    panel_2.setLayout(gl_panel_2);
 	    panel.setLayout(gl_panel);
+	    
+	    
+	    kreiraj.addMouseListener((MouseListener) new MouseAdapter(){
+			public void mouseClicked(MouseEvent e){
+				Korisnik k = new Korisnik();
+				k.setImekorisnika(imek.getText());
+				k.setKorisnickoime(korime.getText());
+				k.setLozinka(lozinka.getText());
+				k.setPrezimekorisnika(prezk.getText());
+				if(tipa.isSelected()) {
+					k.setTipkorisnika(TipKorisnika.APOTEKAR);
+				}else {
+					k.setTipkorisnika(TipKorisnika.LEKAR);
+				}
+				
+				Cuvanje.Korisnici.add(k);
+				Cuvanje.SacuvajKorisnike("korisnici.txt", Cuvanje.Korisnici);
+			}
+			
+			public void mouseEntered(MouseEvent e){
+				kreiraj.setCursor(new Cursor(Cursor.HAND_CURSOR));
+			}
+			});
 		
 	}
 }

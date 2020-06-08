@@ -9,6 +9,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.GroupLayout.Alignment;
@@ -17,10 +18,10 @@ import javax.swing.border.EmptyBorder;
 
 public class Logovanje extends JPanel{
 	
-	public JButton btnNewButton = new JButton("Potvrdi");
+	public JButton potvrdi = new JButton("Potvrdi");
 	public JButton btnOtkai = new JButton("Otkazi");
-	public JTextField textField = new JTextField();
-	public JTextField textField_1 = new JTextField();
+	public JTextField korime = new JTextField();
+	public JTextField lozinka = new JTextField();
 	
 	public Logovanje() {
 		
@@ -50,15 +51,14 @@ public class Logovanje extends JPanel{
 	    lblNewLabel_1_1.setForeground(new Color(8, 126, 139));
 	    lblNewLabel_1_1.setFont(new Font("Montserrat", Font.PLAIN, 12));
 	    
+	    korime.setColumns(10);
 	    
-	    textField.setColumns(10);
 	    
+	    lozinka.setColumns(10);
 	    
-	    textField_1.setColumns(10);
-	    
-	    btnNewButton.setFont(new Font("Montserrat", Font.PLAIN, 11));
-	    btnNewButton.setBackground(new Color(8,126,139));
-	    btnNewButton.setForeground(new Color(194,236,235));
+	    potvrdi.setFont(new Font("Montserrat", Font.PLAIN, 11));
+	    potvrdi.setBackground(new Color(8,126,139));
+	    potvrdi.setForeground(new Color(194,236,235));
 	    
 	    
 	    btnOtkai.setForeground(new Color(194, 236, 235));
@@ -83,14 +83,14 @@ public class Logovanje extends JPanel{
 	    				.addGroup(gl_panel.createSequentialGroup()
 	    					.addComponent(lblNewLabel_1_1, GroupLayout.PREFERRED_SIZE, 90, GroupLayout.PREFERRED_SIZE)
 	    					.addPreferredGap(ComponentPlacement.RELATED)
-	    					.addComponent(textField_1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+	    					.addComponent(lozinka, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
 	    				.addGroup(gl_panel.createSequentialGroup()
 	    					.addComponent(lblNewLabel_1)
 	    					.addPreferredGap(ComponentPlacement.RELATED)
-	    					.addComponent(textField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+	    					.addComponent(korime, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
 	    				.addGroup(gl_panel.createSequentialGroup()
 	    					.addGap(10)
-	    					.addComponent(btnNewButton, GroupLayout.PREFERRED_SIZE, 98, GroupLayout.PREFERRED_SIZE)
+	    					.addComponent(potvrdi, GroupLayout.PREFERRED_SIZE, 98, GroupLayout.PREFERRED_SIZE)
 	    					.addPreferredGap(ComponentPlacement.RELATED)
 	    					.addComponent(btnOtkai, GroupLayout.PREFERRED_SIZE, 97, GroupLayout.PREFERRED_SIZE)))
 	    			.addContainerGap(237, Short.MAX_VALUE))
@@ -105,14 +105,14 @@ public class Logovanje extends JPanel{
 	    			.addPreferredGap(ComponentPlacement.RELATED)
 	    			.addGroup(gl_panel.createParallelGroup(Alignment.TRAILING)
 	    				.addComponent(lblNewLabel_1)
-	    				.addComponent(textField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+	    				.addComponent(korime, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
 	    			.addPreferredGap(ComponentPlacement.RELATED)
 	    			.addGroup(gl_panel.createParallelGroup(Alignment.TRAILING)
 	    				.addComponent(lblNewLabel_1_1, GroupLayout.PREFERRED_SIZE, 15, GroupLayout.PREFERRED_SIZE)
-	    				.addComponent(textField_1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+	    				.addComponent(lozinka, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
 	    			.addPreferredGap(ComponentPlacement.UNRELATED)
 	    			.addGroup(gl_panel.createParallelGroup(Alignment.BASELINE)
-	    				.addComponent(btnNewButton)
+	    				.addComponent(potvrdi)
 	    				.addComponent(btnOtkai))
 	    			.addContainerGap(151, Short.MAX_VALUE))
 	    );
