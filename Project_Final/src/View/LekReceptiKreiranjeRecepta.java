@@ -51,6 +51,8 @@ public class LekReceptiKreiranjeRecepta extends JPanel{
 	float ukup;
 	int suma = 0;
 	
+	public JButton izlog = new JButton("Izloguj se");
+	
 public LekReceptiKreiranjeRecepta() {
 		
 		this.setBackground(new Color(194,236,235));
@@ -262,6 +264,11 @@ public LekReceptiKreiranjeRecepta() {
 	    sifrarec = new JTextField();
 	    sifrarec.setEditable(false);
 	    sifrarec.setColumns(10);
+	    
+	    
+	    izlog.setForeground(new Color(194, 236, 235));
+	    izlog.setFont(new Font("Montserrat", Font.PLAIN, 11));
+	    izlog.setBackground(new Color(8, 126, 139));
 	    GroupLayout gl_panel_2 = new GroupLayout(panel_2);
 	    gl_panel_2.setHorizontalGroup(
 	    	gl_panel_2.createParallelGroup(Alignment.LEADING)
@@ -270,7 +277,10 @@ public LekReceptiKreiranjeRecepta() {
 	    				.addGroup(gl_panel_2.createSequentialGroup()
 	    					.addContainerGap()
 	    					.addGroup(gl_panel_2.createParallelGroup(Alignment.LEADING)
-	    						.addComponent(lblNewLabel, GroupLayout.PREFERRED_SIZE, 118, GroupLayout.PREFERRED_SIZE)
+	    						.addGroup(gl_panel_2.createSequentialGroup()
+	    							.addComponent(lblNewLabel, GroupLayout.PREFERRED_SIZE, 118, GroupLayout.PREFERRED_SIZE)
+	    							.addPreferredGap(ComponentPlacement.RELATED, 319, Short.MAX_VALUE)
+	    							.addComponent(izlog, GroupLayout.PREFERRED_SIZE, 98, GroupLayout.PREFERRED_SIZE))
 	    						.addGroup(gl_panel_2.createSequentialGroup()
 	    							.addComponent(listar, GroupLayout.PREFERRED_SIZE, 107, GroupLayout.PREFERRED_SIZE)
 	    							.addPreferredGap(ComponentPlacement.RELATED)
@@ -320,55 +330,58 @@ public LekReceptiKreiranjeRecepta() {
 	    									.addComponent(lekovitx_1_2_2_1, GroupLayout.PREFERRED_SIZE, 147, GroupLayout.PREFERRED_SIZE)
 	    									.addGap(4)
 	    									.addComponent(sifrarec, GroupLayout.PREFERRED_SIZE, 86, GroupLayout.PREFERRED_SIZE)))))))
-	    			.addContainerGap(138, Short.MAX_VALUE))
+	    			.addContainerGap())
 	    );
 	    gl_panel_2.setVerticalGroup(
 	    	gl_panel_2.createParallelGroup(Alignment.LEADING)
 	    		.addGroup(gl_panel_2.createSequentialGroup()
 	    			.addContainerGap()
-	    			.addComponent(lblNewLabel, GroupLayout.PREFERRED_SIZE, 34, GroupLayout.PREFERRED_SIZE)
-	    			.addGap(6)
 	    			.addGroup(gl_panel_2.createParallelGroup(Alignment.LEADING)
-	    				.addComponent(listar, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE)
-	    				.addComponent(pretragar, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE)
-	    				.addComponent(kreiranjer, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE))
-	    			.addGap(61)
-	    			.addGroup(gl_panel_2.createParallelGroup(Alignment.LEADING)
-	    				.addComponent(lekovitx_1_2_1, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE)
-	    				.addComponent(jmbg, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-	    			.addGap(6)
-	    			.addGroup(gl_panel_2.createParallelGroup(Alignment.LEADING)
-	    				.addComponent(lekovitx_1_2_1_1, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE)
-	    				.addComponent(datum, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-	    			.addPreferredGap(ComponentPlacement.RELATED)
-	    			.addGroup(gl_panel_2.createParallelGroup(Alignment.LEADING)
-	    				.addComponent(lekovitx_1_2_1_1_2, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE)
-	    				.addComponent(vreme, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-	    			.addPreferredGap(ComponentPlacement.RELATED)
-	    			.addGroup(gl_panel_2.createParallelGroup(Alignment.LEADING)
-	    				.addComponent(lekovitx_1_2, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE)
-	    				.addComponent(sifralek, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-	    			.addPreferredGap(ComponentPlacement.RELATED)
-	    			.addGroup(gl_panel_2.createParallelGroup(Alignment.LEADING)
-	    				.addComponent(lekovitx_1_2_1_1_1, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE)
-	    				.addComponent(kolicina, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-	    			.addPreferredGap(ComponentPlacement.RELATED)
-	    			.addGroup(gl_panel_2.createParallelGroup(Alignment.LEADING)
-	    				.addComponent(lekovitx_1_2_2, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE)
-	    				.addComponent(sifralekar, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-	    			.addPreferredGap(ComponentPlacement.RELATED)
-	    			.addGroup(gl_panel_2.createParallelGroup(Alignment.LEADING)
-	    				.addComponent(lekovitx_1_2_2_1, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE)
-	    				.addComponent(sifrarec, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-	    			.addGap(44)
-	    			.addGroup(gl_panel_2.createParallelGroup(Alignment.LEADING)
-	    				.addComponent(lekovitx_1_2_2_2, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE)
-	    				.addComponent(cena, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-	    			.addPreferredGap(ComponentPlacement.UNRELATED)
-	    			.addGroup(gl_panel_2.createParallelGroup(Alignment.LEADING)
-	    				.addComponent(kreiraj)
-	    				.addComponent(otkazi))
-	    			.addContainerGap(183, Short.MAX_VALUE))
+	    				.addComponent(izlog)
+	    				.addGroup(gl_panel_2.createSequentialGroup()
+	    					.addComponent(lblNewLabel, GroupLayout.PREFERRED_SIZE, 34, GroupLayout.PREFERRED_SIZE)
+	    					.addGap(6)
+	    					.addGroup(gl_panel_2.createParallelGroup(Alignment.LEADING)
+	    						.addComponent(listar, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE)
+	    						.addComponent(pretragar, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE)
+	    						.addComponent(kreiranjer, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE))
+	    					.addGap(61)
+	    					.addGroup(gl_panel_2.createParallelGroup(Alignment.LEADING)
+	    						.addComponent(lekovitx_1_2_1, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE)
+	    						.addComponent(jmbg, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+	    					.addGap(6)
+	    					.addGroup(gl_panel_2.createParallelGroup(Alignment.LEADING)
+	    						.addComponent(lekovitx_1_2_1_1, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE)
+	    						.addComponent(datum, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+	    					.addPreferredGap(ComponentPlacement.RELATED)
+	    					.addGroup(gl_panel_2.createParallelGroup(Alignment.LEADING)
+	    						.addComponent(lekovitx_1_2_1_1_2, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE)
+	    						.addComponent(vreme, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+	    					.addPreferredGap(ComponentPlacement.RELATED)
+	    					.addGroup(gl_panel_2.createParallelGroup(Alignment.LEADING)
+	    						.addComponent(lekovitx_1_2, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE)
+	    						.addComponent(sifralek, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+	    					.addPreferredGap(ComponentPlacement.RELATED)
+	    					.addGroup(gl_panel_2.createParallelGroup(Alignment.LEADING)
+	    						.addComponent(lekovitx_1_2_1_1_1, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE)
+	    						.addComponent(kolicina, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+	    					.addPreferredGap(ComponentPlacement.RELATED)
+	    					.addGroup(gl_panel_2.createParallelGroup(Alignment.LEADING)
+	    						.addComponent(lekovitx_1_2_2, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE)
+	    						.addComponent(sifralekar, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+	    					.addPreferredGap(ComponentPlacement.RELATED)
+	    					.addGroup(gl_panel_2.createParallelGroup(Alignment.LEADING)
+	    						.addComponent(lekovitx_1_2_2_1, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE)
+	    						.addComponent(sifrarec, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+	    					.addGap(44)
+	    					.addGroup(gl_panel_2.createParallelGroup(Alignment.LEADING)
+	    						.addComponent(lekovitx_1_2_2_2, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE)
+	    						.addComponent(cena, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+	    					.addPreferredGap(ComponentPlacement.UNRELATED)
+	    					.addGroup(gl_panel_2.createParallelGroup(Alignment.LEADING)
+	    						.addComponent(kreiraj)
+	    						.addComponent(otkazi))))
+	    			.addContainerGap(87, Short.MAX_VALUE))
 	    );
 	    panel_2.setLayout(gl_panel_2);
 	    panel.setLayout(gl_panel);
@@ -447,7 +460,7 @@ public LekReceptiKreiranjeRecepta() {
 	    };
         sifralek.getDocument().addDocumentListener(dl);
 	    kolicina.getDocument().addDocumentListener(dl);
-	    
+	    suma++;
 	    String svi=String.valueOf(suma);
 	    sifralekar.setText(idulog);
 	    sifrarec.setText(svi);
