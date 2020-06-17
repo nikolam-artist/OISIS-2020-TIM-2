@@ -43,6 +43,9 @@ public class AdmLekoviPrikazSvih extends JPanel{
 	public JLabel korisnici = new JLabel(new ImageIcon("Images\\people2.png"));
 	public JLabel izvestaj = new JLabel(new ImageIcon("Images\\medical-prescription2.png"));
 	private JTextField filterText;
+	private JTextField filterText_1;
+	
+	public JButton izlog = new JButton("Izloguj se");
 	
 public AdmLekoviPrikazSvih() {
 		
@@ -246,10 +249,10 @@ Cuvanje.Lekovi = Cuvanje.UcitajLekove("lekovi.txt");
 	    sorter.setSortKeys(sortKeys);
 	    
 	    
-	    filterText = new JTextField();
-	    filterText.setColumns(10);
+	    filterText_1 = new JTextField();
+	    filterText_1.setColumns(10);
 	    
-	    filterText.getDocument().addDocumentListener(new DocumentListener(){
+	    filterText_1.getDocument().addDocumentListener(new DocumentListener(){
 
             @Override
             public void insertUpdate(DocumentEvent e) {
@@ -295,7 +298,7 @@ Cuvanje.Lekovi = Cuvanje.UcitajLekove("lekovi.txt");
 	    
 	    
 	    table.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
-	    table.getColumnModel().getColumn(0).setPreferredWidth(178);
+	    table.getColumnModel().getColumn(0).setPreferredWidth(145);
 	    table.getColumnModel().getColumn(1).setPreferredWidth(190);
 	    table.getColumnModel().getColumn(2).setPreferredWidth(35);
 	    table.getColumnModel().getColumn(3).setPreferredWidth(70);
@@ -326,6 +329,11 @@ Cuvanje.Lekovi = Cuvanje.UcitajLekove("lekovi.txt");
 	    scrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 	    
 	    
+	    izlog.setForeground(new Color(194, 236, 235));
+	    izlog.setFont(new Font("Montserrat", Font.PLAIN, 11));
+	    izlog.setBackground(new Color(8, 126, 139));
+	    
+	    
 	    
 	    
 	    GroupLayout gl_panel_2 = new GroupLayout(panel_2);
@@ -343,23 +351,31 @@ Cuvanje.Lekovi = Cuvanje.UcitajLekove("lekovi.txt");
 	    							.addComponent(dodajl, GroupLayout.PREFERRED_SIZE, 86, GroupLayout.PREFERRED_SIZE)
 	    							.addGap(6)
 	    							.addComponent(izmenil, GroupLayout.PREFERRED_SIZE, 125, GroupLayout.PREFERRED_SIZE)))
-	    					.addPreferredGap(ComponentPlacement.RELATED)
-	    					.addComponent(lekovitx_1_1_2_1, GroupLayout.PREFERRED_SIZE, 58, GroupLayout.PREFERRED_SIZE)
-	    					.addGap(4)
-	    					.addComponent(filterText, GroupLayout.PREFERRED_SIZE, 86, GroupLayout.PREFERRED_SIZE))
+	    					.addGroup(gl_panel_2.createParallelGroup(Alignment.LEADING)
+	    						.addGroup(gl_panel_2.createSequentialGroup()
+	    							.addPreferredGap(ComponentPlacement.RELATED)
+	    							.addComponent(lekovitx_1_1_2_1, GroupLayout.PREFERRED_SIZE, 58, GroupLayout.PREFERRED_SIZE)
+	    							.addGap(4)
+	    							.addComponent(filterText_1, GroupLayout.PREFERRED_SIZE, 86, GroupLayout.PREFERRED_SIZE))
+	    						.addGroup(Alignment.TRAILING, gl_panel_2.createSequentialGroup()
+	    							.addPreferredGap(ComponentPlacement.RELATED, 116, Short.MAX_VALUE)
+	    							.addComponent(izlog, GroupLayout.PREFERRED_SIZE, 98, GroupLayout.PREFERRED_SIZE)
+	    							.addPreferredGap(ComponentPlacement.RELATED))))
 	    				.addComponent(lekovitx_1_1_2, GroupLayout.PREFERRED_SIZE, 398, GroupLayout.PREFERRED_SIZE)
-	    				.addComponent(scrollPane, GroupLayout.PREFERRED_SIZE, 529, GroupLayout.PREFERRED_SIZE))
-	    			.addContainerGap(16, Short.MAX_VALUE))
+	    				.addComponent(scrollPane, GroupLayout.PREFERRED_SIZE, 493, GroupLayout.PREFERRED_SIZE))
+	    			.addContainerGap(93, Short.MAX_VALUE))
 	    );
 	    gl_panel_2.setVerticalGroup(
 	    	gl_panel_2.createParallelGroup(Alignment.LEADING)
 	    		.addGroup(gl_panel_2.createSequentialGroup()
 	    			.addContainerGap()
-	    			.addComponent(lblNewLabel)
+	    			.addGroup(gl_panel_2.createParallelGroup(Alignment.LEADING)
+	    				.addComponent(lblNewLabel)
+	    				.addComponent(izlog))
 	    			.addPreferredGap(ComponentPlacement.RELATED)
 	    			.addGroup(gl_panel_2.createParallelGroup(Alignment.LEADING)
 	    				.addComponent(lekovitx_1_1_2_1, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE)
-	    				.addComponent(filterText, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+	    				.addComponent(filterText_1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
 	    				.addGroup(gl_panel_2.createParallelGroup(Alignment.BASELINE)
 	    					.addComponent(listal)
 	    					.addComponent(dodajl, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE)
