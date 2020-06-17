@@ -42,6 +42,9 @@ public class AdmReceptiPrikazSvih extends JPanel{
 	public JLabel korisnici = new JLabel(new ImageIcon("Images\\people2.png"));
 	public JLabel izvestaj = new JLabel(new ImageIcon("Images\\medical-prescription2.png"));
 	private JTextField filterText;
+	private JTextField filterText_1;
+	
+	public JButton izlog = new JButton("Izloguj se");
 	
 public AdmReceptiPrikazSvih() {
 		
@@ -223,7 +226,7 @@ Cuvanje.Recepti = Cuvanje.UcitajRecepte("recepti.txt");
 	    
 
 
-	    JTable table = new JTable(new DefaultTableModel(null, new Object[]{"Sifra recepta", "ID lekara", "Datum", "Vreme", "JMBG", "Lek"}));
+	    JTable table = new JTable(new DefaultTableModel(null, new Object[]{"Sifra", "ID lekara", "Datum", "Vreme", "JMBG", "Lek"}));
 	    
 	    TableRowSorter<TableModel> sorter = new TableRowSorter<TableModel>(table.getModel());
 	    table.setRowSorter(sorter);
@@ -234,11 +237,11 @@ Cuvanje.Recepti = Cuvanje.UcitajRecepte("recepti.txt");
 	    sorter.setSortKeys(sortKeys);
 	    
 	    
-	    filterText = new JTextField();
+	    filterText_1 = new JTextField();
 	    
 	    
 	    
-	    filterText.getDocument().addDocumentListener(new DocumentListener(){
+	    filterText_1.getDocument().addDocumentListener(new DocumentListener(){
 
             @Override
             public void insertUpdate(DocumentEvent e) {
@@ -284,11 +287,11 @@ Cuvanje.Recepti = Cuvanje.UcitajRecepte("recepti.txt");
 	    
 	    
 	    table.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
-	    table.getColumnModel().getColumn(0).setPreferredWidth(50);
-	    table.getColumnModel().getColumn(1).setPreferredWidth(162);
+	    table.getColumnModel().getColumn(0).setPreferredWidth(40);
+	    table.getColumnModel().getColumn(1).setPreferredWidth(146);
 	    table.getColumnModel().getColumn(2).setPreferredWidth(60);
 	    table.getColumnModel().getColumn(3).setPreferredWidth(60);
-	    table.getColumnModel().getColumn(4).setPreferredWidth(122);
+	    table.getColumnModel().getColumn(4).setPreferredWidth(100);
 	    table.getColumnModel().getColumn(5).setPreferredWidth(70);
 
 	    
@@ -303,7 +306,7 @@ Cuvanje.Recepti = Cuvanje.UcitajRecepte("recepti.txt");
 	    			Cuvanje.Recepti.get(i).getNazivleka()});
 	    }
 	   
-	    filterText.setColumns(10);
+	    filterText_1.setColumns(10);
 	    
 	    
 	    JScrollPane scrollPane = new JScrollPane(table);
@@ -312,41 +315,53 @@ Cuvanje.Recepti = Cuvanje.UcitajRecepte("recepti.txt");
 	    scrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 	    
 	    
+	    izlog.setForeground(new Color(194, 236, 235));
+	    izlog.setFont(new Font("Montserrat", Font.PLAIN, 11));
+	    izlog.setBackground(new Color(8, 126, 139));
+	    
+	    
 	    GroupLayout gl_panel_2 = new GroupLayout(panel_2);
 	    gl_panel_2.setHorizontalGroup(
 	    	gl_panel_2.createParallelGroup(Alignment.TRAILING)
 	    		.addGroup(gl_panel_2.createSequentialGroup()
 	    			.addContainerGap()
 	    			.addGroup(gl_panel_2.createParallelGroup(Alignment.LEADING)
-	    				.addComponent(lblNewLabel)
 	    				.addGroup(gl_panel_2.createSequentialGroup()
-	    					.addComponent(listar, GroupLayout.PREFERRED_SIZE, 107, GroupLayout.PREFERRED_SIZE)
-	    					.addPreferredGap(ComponentPlacement.RELATED)
-	    					.addComponent(lekovitx_1_1_2_1, GroupLayout.PREFERRED_SIZE, 58, GroupLayout.PREFERRED_SIZE)
-	    					.addGap(4)
-	    					.addComponent(filterText, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-	    				.addComponent(lekovitx_1_1_2, GroupLayout.PREFERRED_SIZE, 406, GroupLayout.PREFERRED_SIZE))
-	    			.addContainerGap(139, Short.MAX_VALUE))
-	    		.addGroup(gl_panel_2.createSequentialGroup()
-	    			.addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-	    			.addComponent(scrollPane, GroupLayout.PREFERRED_SIZE, 536, GroupLayout.PREFERRED_SIZE)
-	    			.addContainerGap())
+	    					.addGroup(gl_panel_2.createParallelGroup(Alignment.LEADING)
+	    						.addGroup(gl_panel_2.createSequentialGroup()
+	    							.addComponent(lblNewLabel)
+	    							.addPreferredGap(ComponentPlacement.RELATED, 320, Short.MAX_VALUE)
+	    							.addComponent(izlog, GroupLayout.PREFERRED_SIZE, 98, GroupLayout.PREFERRED_SIZE))
+	    						.addGroup(gl_panel_2.createSequentialGroup()
+	    							.addComponent(listar, GroupLayout.PREFERRED_SIZE, 107, GroupLayout.PREFERRED_SIZE)
+	    							.addPreferredGap(ComponentPlacement.RELATED)
+	    							.addComponent(lekovitx_1_1_2_1, GroupLayout.PREFERRED_SIZE, 58, GroupLayout.PREFERRED_SIZE)
+	    							.addGap(4)
+	    							.addComponent(filterText_1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+	    						.addComponent(lekovitx_1_1_2, GroupLayout.PREFERRED_SIZE, 406, GroupLayout.PREFERRED_SIZE))
+	    					.addContainerGap())
+	    				.addGroup(gl_panel_2.createSequentialGroup()
+	    					.addComponent(scrollPane, GroupLayout.PREFERRED_SIZE, 479, GroupLayout.PREFERRED_SIZE)
+	    					.addGap(67))))
 	    );
 	    gl_panel_2.setVerticalGroup(
 	    	gl_panel_2.createParallelGroup(Alignment.LEADING)
 	    		.addGroup(gl_panel_2.createSequentialGroup()
 	    			.addContainerGap()
-	    			.addComponent(lblNewLabel)
-	    			.addPreferredGap(ComponentPlacement.RELATED)
-	    			.addGroup(gl_panel_2.createParallelGroup(Alignment.TRAILING)
-	    				.addComponent(listar, 0, 0, Short.MAX_VALUE)
-	    				.addGroup(gl_panel_2.createParallelGroup(Alignment.LEADING)
-	    					.addGroup(gl_panel_2.createSequentialGroup()
-	    						.addGap(2)
-	    						.addComponent(lekovitx_1_1_2_1, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE))
-	    					.addComponent(filterText, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
-	    			.addPreferredGap(ComponentPlacement.RELATED)
-	    			.addComponent(lekovitx_1_1_2, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE)
+	    			.addGroup(gl_panel_2.createParallelGroup(Alignment.LEADING)
+	    				.addGroup(gl_panel_2.createSequentialGroup()
+	    					.addComponent(lblNewLabel)
+	    					.addPreferredGap(ComponentPlacement.RELATED)
+	    					.addGroup(gl_panel_2.createParallelGroup(Alignment.TRAILING)
+	    						.addComponent(listar, 0, 0, Short.MAX_VALUE)
+	    						.addGroup(gl_panel_2.createParallelGroup(Alignment.LEADING)
+	    							.addGroup(gl_panel_2.createSequentialGroup()
+	    								.addGap(2)
+	    								.addComponent(lekovitx_1_1_2_1, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE))
+	    							.addComponent(filterText_1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
+	    					.addPreferredGap(ComponentPlacement.RELATED)
+	    					.addComponent(lekovitx_1_1_2, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE))
+	    				.addComponent(izlog))
 	    			.addPreferredGap(ComponentPlacement.RELATED)
 	    			.addComponent(scrollPane, GroupLayout.PREFERRED_SIZE, 313, GroupLayout.PREFERRED_SIZE)
 	    			.addGap(79))
