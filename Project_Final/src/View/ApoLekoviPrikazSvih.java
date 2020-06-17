@@ -43,6 +43,8 @@ public class ApoLekoviPrikazSvih extends JPanel{
     public JLabel prodaja = new JLabel(new ImageIcon("Images\\medical2.png"));
     private JTextField filterText;
     private JTable table;
+    
+    public JButton izlog = new JButton("Izloguj se");
 	
 public ApoLekoviPrikazSvih() {
 		
@@ -229,7 +231,7 @@ public ApoLekoviPrikazSvih() {
 	    
 	    
 	    table.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
-	    table.getColumnModel().getColumn(0).setPreferredWidth(178);
+	    table.getColumnModel().getColumn(0).setPreferredWidth(145);
 	    table.getColumnModel().getColumn(1).setPreferredWidth(190);
 	    table.getColumnModel().getColumn(2).setPreferredWidth(35);
 	    table.getColumnModel().getColumn(3).setPreferredWidth(70);
@@ -263,6 +265,11 @@ public ApoLekoviPrikazSvih() {
 	    lekovitx_1_1_2.setHorizontalAlignment(SwingConstants.CENTER);
 	    lekovitx_1_1_2.setForeground(new Color(8, 126, 139));
 	    lekovitx_1_1_2.setFont(new Font("Montserrat", Font.PLAIN, 14));
+	    
+	    
+	    izlog.setForeground(new Color(194, 236, 235));
+	    izlog.setFont(new Font("Montserrat", Font.PLAIN, 11));
+	    izlog.setBackground(new Color(8, 126, 139));
 
 	    GroupLayout gl_panel_2 = new GroupLayout(panel_2);
 	    gl_panel_2.setHorizontalGroup(
@@ -270,26 +277,34 @@ public ApoLekoviPrikazSvih() {
 	    		.addGroup(gl_panel_2.createSequentialGroup()
 	    			.addContainerGap()
 	    			.addGroup(gl_panel_2.createParallelGroup(Alignment.LEADING)
-	    				.addComponent(lblNewLabel)
 	    				.addGroup(gl_panel_2.createSequentialGroup()
-	    					.addComponent(listal, GroupLayout.PREFERRED_SIZE, 91, GroupLayout.PREFERRED_SIZE)
-	    					.addPreferredGap(ComponentPlacement.RELATED)
-	    					.addComponent(dodajl, GroupLayout.PREFERRED_SIZE, 86, GroupLayout.PREFERRED_SIZE)
-	    					.addPreferredGap(ComponentPlacement.RELATED)
-	    					.addComponent(izmenil)
-	    					.addPreferredGap(ComponentPlacement.RELATED)
-	    					.addComponent(lekovitx_1_1_2_1, GroupLayout.PREFERRED_SIZE, 58, GroupLayout.PREFERRED_SIZE)
-	    					.addGap(4)
-	    					.addComponent(filterText, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-	    				.addComponent(lekovitx_1_1_2, GroupLayout.PREFERRED_SIZE, 398, GroupLayout.PREFERRED_SIZE)
-	    				.addComponent(scrollPane, GroupLayout.PREFERRED_SIZE, 529, GroupLayout.PREFERRED_SIZE))
-	    			.addContainerGap(19, Short.MAX_VALUE))
+	    					.addGroup(gl_panel_2.createParallelGroup(Alignment.LEADING)
+	    						.addGroup(gl_panel_2.createSequentialGroup()
+	    							.addComponent(listal, GroupLayout.PREFERRED_SIZE, 91, GroupLayout.PREFERRED_SIZE)
+	    							.addPreferredGap(ComponentPlacement.RELATED)
+	    							.addComponent(dodajl, GroupLayout.PREFERRED_SIZE, 86, GroupLayout.PREFERRED_SIZE)
+	    							.addPreferredGap(ComponentPlacement.RELATED)
+	    							.addComponent(izmenil)
+	    							.addPreferredGap(ComponentPlacement.RELATED)
+	    							.addComponent(lekovitx_1_1_2_1, GroupLayout.PREFERRED_SIZE, 58, GroupLayout.PREFERRED_SIZE)
+	    							.addGap(4)
+	    							.addComponent(filterText, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+	    						.addComponent(lekovitx_1_1_2, GroupLayout.PREFERRED_SIZE, 398, GroupLayout.PREFERRED_SIZE)
+	    						.addComponent(scrollPane, GroupLayout.PREFERRED_SIZE, 487, GroupLayout.PREFERRED_SIZE))
+	    					.addContainerGap(61, Short.MAX_VALUE))
+	    				.addGroup(gl_panel_2.createSequentialGroup()
+	    					.addComponent(lblNewLabel)
+	    					.addPreferredGap(ComponentPlacement.RELATED, 327, Short.MAX_VALUE)
+	    					.addComponent(izlog, GroupLayout.PREFERRED_SIZE, 98, GroupLayout.PREFERRED_SIZE)
+	    					.addGap(20))))
 	    );
 	    gl_panel_2.setVerticalGroup(
 	    	gl_panel_2.createParallelGroup(Alignment.LEADING)
 	    		.addGroup(gl_panel_2.createSequentialGroup()
 	    			.addContainerGap()
-	    			.addComponent(lblNewLabel)
+	    			.addGroup(gl_panel_2.createParallelGroup(Alignment.LEADING)
+	    				.addComponent(lblNewLabel)
+	    				.addComponent(izlog))
 	    			.addPreferredGap(ComponentPlacement.RELATED)
 	    			.addGroup(gl_panel_2.createParallelGroup(Alignment.LEADING)
 	    				.addGroup(gl_panel_2.createParallelGroup(Alignment.BASELINE)
