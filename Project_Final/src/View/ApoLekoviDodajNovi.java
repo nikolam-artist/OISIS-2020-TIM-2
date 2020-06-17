@@ -40,6 +40,8 @@ public class ApoLekoviDodajNovi extends JPanel{
     
     int suma = 0;
     String svi = new String();
+    
+    public JButton izlog = new JButton("Izloguj se");
 	
 public ApoLekoviDodajNovi() {
 		
@@ -121,6 +123,11 @@ public ApoLekoviDodajNovi() {
 	    narecept.setBackground(new Color(194,236,235));
 	    narecept.setForeground(new Color(8, 126, 139));
 	    narecept.setFont(new Font("Montserrat", Font.PLAIN, 14));
+	    
+	    
+	    izlog.setForeground(new Color(194, 236, 235));
+	    izlog.setFont(new Font("Montserrat", Font.PLAIN, 11));
+	    izlog.setBackground(new Color(8, 126, 139));
 	    GroupLayout gl_panel_2 = new GroupLayout(panel_2);
 	    gl_panel_2.setHorizontalGroup(
 	    	gl_panel_2.createParallelGroup(Alignment.LEADING)
@@ -150,20 +157,21 @@ public ApoLekoviDodajNovi() {
 	    								.addComponent(narecept)))
 	    						.addGroup(gl_panel_2.createSequentialGroup()
 	    							.addComponent(lblNewLabel)
-	    							.addPreferredGap(ComponentPlacement.RELATED, 340, Short.MAX_VALUE))))
+	    							.addPreferredGap(ComponentPlacement.RELATED, 334, Short.MAX_VALUE)
+	    							.addComponent(izlog, GroupLayout.PREFERRED_SIZE, 98, GroupLayout.PREFERRED_SIZE))))
 	    				.addGroup(gl_panel_2.createSequentialGroup()
 	    					.addGap(150)
 	    					.addComponent(kreiraj, GroupLayout.PREFERRED_SIZE, 98, GroupLayout.PREFERRED_SIZE)
 	    					.addGap(6)
 	    					.addComponent(otkazi, GroupLayout.PREFERRED_SIZE, 97, GroupLayout.PREFERRED_SIZE)))
-	    			.addContainerGap(102, Short.MAX_VALUE))
+	    			.addContainerGap())
 	    );
 	    gl_panel_2.setVerticalGroup(
 	    	gl_panel_2.createParallelGroup(Alignment.LEADING)
 	    		.addGroup(gl_panel_2.createSequentialGroup()
+	    			.addContainerGap()
 	    			.addGroup(gl_panel_2.createParallelGroup(Alignment.LEADING)
 	    				.addGroup(gl_panel_2.createSequentialGroup()
-	    					.addContainerGap()
 	    					.addComponent(lblNewLabel)
 	    					.addPreferredGap(ComponentPlacement.RELATED)
 	    					.addGroup(gl_panel_2.createParallelGroup(Alignment.BASELINE)
@@ -187,7 +195,8 @@ public ApoLekoviDodajNovi() {
 	    						.addComponent(lekovitx_1_2_1_1_1, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE)
 	    						.addComponent(cena, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
 	    				.addGroup(gl_panel_2.createSequentialGroup()
-	    					.addGap(246)
+	    					.addComponent(izlog)
+	    					.addGap(212)
 	    					.addComponent(narecept)))
 	    			.addPreferredGap(ComponentPlacement.UNRELATED)
 	    			.addGroup(gl_panel_2.createParallelGroup(Alignment.LEADING)
